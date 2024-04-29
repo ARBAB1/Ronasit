@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'ZonaThin';
+    src: url("../assets/ZonaPro-Hairline.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family: 'ZonaNormal';
+    src: url("../assets/ZonaPro-Regular.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family: 'ZonaSemi';
+    src: url("../assets/ZonaPro-SemiBold.ttf") format('truetype');
+}
+
+
+@font-face {
+    font-family: 'ZonaBold';
+    src: url("../assets/ZonaPro-Bold.ttf") format('truetype');
+}
+
+
