@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+body{
+    transition: 0.5s all;
+    /* cursor: none; */
+    height: 100vh;
+}
+
 @font-face {
     font-family: 'ZonaThin';
     src: url("../assets/ZonaPro-Hairline.ttf") format('truetype');
