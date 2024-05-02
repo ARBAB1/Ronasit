@@ -1,0 +1,10 @@
+.cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: rgb(124, 248, 255);
+    background: linear-gradient(177deg, rgba(124, 248, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    overflow: hidden;
+}
