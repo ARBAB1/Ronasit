@@ -1,15 +1,14 @@
 'use client'
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
 import { Inter } from "next/font/google";
-import { useTheme } from "next-themes";
 import Header from "@/components/header";
 import StickyCursor from '../components/stickyCursor/index';
 import Style from './home.module.css'
 import { FaPlay, FaInstagram, FaBehance, FaRegLightbulb, FaMobileAlt } from "react-icons/fa";
 import { BiLogoFacebook } from "react-icons/bi";
 import { IoBasketballOutline } from "react-icons/io5";
-import { RiLinkedinLine } from "react-icons/ri";
 import { GrUnlink } from "react-icons/gr";
+import { RiLinkedinLine } from "react-icons/ri";
 import 'animate.css';
 
 
@@ -17,6 +16,35 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const stickyElement = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const targetRef = useRef(null);
+
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      });
+    }, options);
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+
 
   return (
     <>
@@ -94,6 +122,8 @@ export default function Home() {
             <p className="font-ZonaNormalFont text-3xl">You may need our<br></br> services if you want to:
             </p>
           </div>
+
+
           <div className="p-12 m-2 lg:col-span-3 sm:col-span-6 animate__animated animate__fadeInUp">
             <div className="flex pb-8 items-start">
               <div className="pr-8">
@@ -135,29 +165,147 @@ export default function Home() {
             <button className="font-ZonaBoldFont px-14 py-5 border rounded-full">View More</button>
 
 
-
-          <div className="grid grid-rows-2 grid-flow-col pt-32">
-              <div className="grid-col-6">
-                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold">Website and<br/>Platforms</h4>
-                <p>We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards.1</p>
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 pt-32">
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Website and<br />Platforms</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
               </div>
-              <div className="grid-col-6 pt-12">
-                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold">Mobile Apps</h4>
-                <p>We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards.2</p>
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Mobile Apps</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
               </div>
-              <div className="grid-col-6 pl-12">
-                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold">Strategy and Branding</h4>
-                <p>We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards.3</p>
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Strategy and<br /> Branding</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
               </div>
-              <div className="grid-col-6 pt-12 pl-12">
-                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold">Design<br/>Concept</h4>
-                <p>We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards.4</p>
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Design<br />Concept</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
               </div>
-          </div>
+            </div>
 
           </div>
         </div>
       </div>
+
+
+      <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
+        <div className="grid md:grid-cols-6">
+
+          <div className="px-12 m-2 lg:col-span-6 sm:col-span-6 animate__animated animate__fadeInUp">
+            <p className="font-ZonaNormalFont text-lg">02</p>
+          </div>
+
+          <div className="p-12 m-2 lg:col-span-2 sm:col-span-6 animate__animated animate__fadeInUp">
+            <h2 className="text-5xl font-ZonaBoldFont leading-tight	mb-12">Development</h2>
+          </div>
+
+          <div className="p-12 m-2 lg:col-span-4 sm:col-span-6 animate__animated animate__fadeInUp">
+            <p className="font-ZonaNormalFont text-3xl leading-tight pb-12">We work hard to create eye-catching and intuitive interface designs that provide users with enjoyable experience.</p>
+            <button className="font-ZonaBoldFont px-14 py-5 border rounded-full">View More</button>
+
+
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 pt-32">
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Website and<br />Platforms</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
+              </div>
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Mobile Apps</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
+              </div>
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Strategy and<br /> Branding</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
+              </div>
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Design<br />Concept</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
+        <div className="grid md:grid-cols-6">
+          <div className="px-12 m-2 lg:col-span-6 sm:col-span-6 animate__animated animate__fadeInUp">
+            <p className="font-ZonaNormalFont text-lg">03</p>
+          </div>
+
+          <div className="p-12 m-2 lg:col-span-2 sm:col-span-6 animate__animated animate__fadeInUp">
+            <h2 className="text-5xl font-ZonaBoldFont leading-tight	mb-12">Maintenance</h2>
+          </div>
+
+          <div className="p-12 m-2 lg:col-span-4 sm:col-span-6 animate__animated animate__fadeInUp">
+            <p className="font-ZonaNormalFont text-3xl leading-tight pb-12">We work hard to create eye-catching and intuitive interface designs that provide users with enjoyable experience.</p>
+            <button className="font-ZonaBoldFont px-14 py-5 border rounded-full">View More</button>
+
+
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 pt-32">
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Website and<br />Platforms</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
+              </div>
+              <div className={`md:grid-col-6 sm:grid-col-12 pt-4 pb-32 px-6 ${Style.AboutHoverCard}`}>
+                <div className={Style.AboutHoverCardInner}></div>
+                <h4 className="font-ZonaNormalFont text-3xl leading-tight pb-6 font-semibold h-28">Mobile Apps</h4>
+                <p className="font-ZonaNormalFont text-slate-300">We are ready to work on projects of any complexity and size. With our profound design experience, we can create both one-page sites and complex admin panels with several dashboards</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div className={`py-20 flex items-center justify-center flex-col ${Style.MVPBanner}`}>
+        <h3 className="font-ZonaBoldFont text-5xl">MVP calculator</h3>
+        <div className="font-ZonaNormalFont text-center pt-6" style={{ width: '36rem' }}>
+          <p>An MVP is a basic version of a product built with the core features to satisfy early users and validate a product idea quickly and with minimal costs. Here you can get a rough estimate of your future product and set budget frames.</p>
+          <button className={Style.MVPBannerBtn}>
+            Start
+          </button>
+        </div>
+      </div>
+
+
+
+      <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
+        <h5 className='text-3xl font-ZonaNormalFont'>
+          As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
+        </h5>
+        <br />
+        <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
+      </div>
+
+
+
+      <div ref={targetRef} className="container pt-28 mx-auto lg:px-28 sm:px-4">
+        <div className="grid md:grid-cols-6">
+          <div className="p-12 m-2 lg:col-span-3 sm:col-span-6 animate__animated animate__fadeInUp" >
+          </div>
+
+
+
+          <div className={`p-12 m-2 lg:col-span-3 sm:col-span-6 ${isVisible ? Style.visibleClass : Style.InvisibleClass}`}>
+            <div className={Style.BorderGlassOne}></div>
+          </div>
+
+
+        </div>
+      </div>
+
     </>
   );
 }
