@@ -92,7 +92,6 @@ export default function Home() {
       </div>
 
 
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-6">
 
@@ -112,8 +111,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
 
 
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
@@ -146,7 +143,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
 
 
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
@@ -269,6 +265,7 @@ export default function Home() {
         </div>
       </div>
 
+
       <div className={`py-20 flex items-center justify-center flex-col ${Style.MVPBanner}`}>
         <h3 className="font-ZonaBoldFont text-5xl">MVP calculator</h3>
         <div className="font-ZonaNormalFont text-center pt-6" style={{ width: '36rem' }}>
@@ -278,7 +275,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-
 
 
       <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
@@ -304,6 +300,26 @@ export default function Home() {
 
 
         </div>
+      </div>
+
+
+
+      <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
+        <h5 className='text-3xl font-ZonaNormalFont'>
+          As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
+        </h5>
+        <br />
+        <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
+      </div>
+
+
+
+      <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
+        <h5 className='text-3xl font-ZonaNormalFont'>
+          As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
+        </h5>
+        <br />
+        <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
       </div>
 
     </>
