@@ -1,12 +1,15 @@
-
-
 .HeaderBackground {
     position: fixed;
     width: 100%;
     box-sizing: border-box;
     cursor: pointer;
-    mix-blend-mode: color-burn;
-    z-index: 1;
+    z-index: 9990 !important;
+    background: #121212;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(134, 134, 134, 0.18);
 }
 
 .burger {

@@ -1,4 +1,4 @@
-.DesignElement1{
+.DesignElement1 {
     display: inline-block;
     margin-bottom: 0rem;
     line-height: 130%;
@@ -16,8 +16,9 @@
     left: 0;
     content: "";
 }
+
 .DesignElement1:hover:before {
-    background:white;
+    background: white;
     opacity: 0.2;
     animation: borderWaveAnimation 2s linear infinite;
 }
@@ -33,12 +34,14 @@
     left: 0;
     content: "";
 }
+
 .DesignElement1:hover:after {
     width: 100%;
-    transition-timing-function: cubic-bezier(.2,0,0,1);
+    transition-timing-function: cubic-bezier(.2, 0, 0, 1);
     animation: borderWaveAnimation 2s linear infinite;
 }
-.DesignElement3{
+
+.DesignElement3 {
     display: inline-block;
     margin-bottom: 0rem;
     line-height: 130%;
@@ -56,8 +59,9 @@
     left: 0;
     content: "";
 }
+
 .DesignElement3:hover:before {
-    background:white;
+    background: white;
     opacity: 0.2;
     animation: borderWaveAnimation 2s linear infinite;
 }
@@ -73,12 +77,14 @@
     left: 0;
     content: "";
 }
+
 .DesignElement3:hover:after {
     width: 100%;
-    transition-timing-function: cubic-bezier(.2,0,0,1);
+    transition-timing-function: cubic-bezier(.2, 0, 0, 1);
     animation: borderWaveAnimation 2s linear infinite;
 }
-.DesignElemen2{
+
+.DesignElemen2 {
     display: inline-block;
     margin-bottom: 0rem;
     line-height: 130%;
@@ -96,8 +102,9 @@
     left: 0;
     content: "";
 }
+
 .DesignElement2:hover:before {
-    background:white;
+    background: white;
     opacity: 0.2;
     animation: borderWaveAnimation 2s linear infinite;
 }
@@ -113,23 +120,26 @@
     left: 0;
     content: "";
 }
+
 .DesignElement2:hover:after {
     width: 100%;
-    transition-timing-function: cubic-bezier(.2,0,0,1);
+    transition-timing-function: cubic-bezier(.2, 0, 0, 1);
     animation: borderWaveAnimation 2s linear infinite;
 }
-.reelVideo{
+
+.reelVideo {
     height: 6rem;
     width: 6rem;
     position: absolute;
-    transform:scale(2.5);
+    transform: scale(2.5);
     opacity: 1;
     transition-property: height, max-height, border-radius, opacity;
     transition-duration: 10s, 10s, 0s, 0s;
     transition-delay: 0s, 0s, 0s, 1s;
-    transition-timing-function: cubic-bezier(.37,0,.63,1), cubic-bezier(.37,0,.63,1), cubic-bezier(.37,0,.63,1), linear;
+    transition-timing-function: cubic-bezier(.37, 0, .63, 1), cubic-bezier(.37, 0, .63, 1), cubic-bezier(.37, 0, .63, 1), linear;
 }
-.VideoStarterBtn{
+
+.VideoStarterBtn {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -143,25 +153,27 @@
     align-items: center;
     justify-content: center;
 }
-.VideoStarterBtn:hover{
+
+.VideoStarterBtn:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
-.showreelText{
+
+.showreelText {
     fill: white;
 }
 
-.showreel_showreel_text{
+.showreel_showreel_text {
     animation: reelTextRotate 12s linear infinite;
     height: 9rem;
     width: 9rem;
-    bottom:80px;
+    bottom: 80px;
 }
 
-.SocialLinkLeft{
+.SocialLinkLeft {
     position: fixed;
     left: 0px;
     bottom: 0px;
-    height:280px;
+    height: 280px;
     width: 90px;
     display: flex;
     flex-direction: column;
@@ -169,31 +181,116 @@
     align-items: center;
 }
 
-.SocilaLink{
-    height:35px;
+.SocilaLink {
+    height: 35px;
     width: 35px;
     background-color: white;
     border-radius: 50%;
-    margin-block:5px ;
+    margin-block: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.AboutHoverCard {
+    transition: 1s all;
+    cursor: pointer;
+    position: relative;
+}
+
+.AboutHoverCardInner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(../assets/images/hoverBack.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: 1s all;
+}
+
+.AboutHoverCardInner:hover {
+    opacity: 1;
+}
+
+.MVPBanner {
+    background: rgb(95, 188, 255);
+    background: linear-gradient(180deg, rgba(95, 188, 255, 1) 0%, rgba(38, 160, 248, 1) 100%);
+}
+
+.MVPBannerBtn {
+    border: 1px solid #fff;
+    width: 100%;
+    padding-block: 20px;
+    border-radius: 100px;
+    margin-top: 30px;
+}
+
 @keyframes reelTextRotate {
     0% {
         transform: rotate(0);
     }
+
     100% {
         transform: rotate(-1turn);
     }
 }
+
 @keyframes borderWaveAnimation {
     0% {
         -webkit-mask-position: 0 0;
         mask-position: 0 0;
     }
+
     100% {
         -webkit-mask-position: 114px 0;
         mask-position: 114px 0;
     }
+}
+
+
+.visibleClass {
+    height: 70vh;
+    width: 500px;
+    background-color: black;
+    position: fixed;
+    bottom: 10vh;
+    right: 40vh;
+    transition: 0.6s all;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BorderGlassOne {
+    position: absolute;
+    width: 100%;
+    background-color: aqua;
+    bottom: 0;
+    height: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    animation: identifier !important;
+}
+
+@keyframes identifier {
+    0% {
+        height: 10px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+
+    100% {
+        height: 70vh;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+    }
+}
+
+.InvisibleClass {
+    opacity: 0;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/header/index";
 import Developmenpic from '../../../src/assets/Images/Developmenpic.jpg';
-import Image from 'next/image'; // Importing the Image component from Next.js
+import Image from 'next/image';
 import Style from "./services.module.css"
 
 const Services = () => {
@@ -17,13 +17,13 @@ const Services = () => {
 
             <div className="container mx-auto">
                 <div className="md:flex mt-48">
-                    <div className="md:w-1/2 px-4 md:pl-24">
+                    <div className="md:pl-14">
                         <div className="mt-10 md:mt-24">
                             <h3 className="text-4xl font-ZonaSemiFont mb-10">Development</h3>
-                            <p className="font-ZonaNormalFont text-lg">Implementing your project with scalable architecture design, modern technology, and an excellent level of data security.</p>
+                            <p className="font-ZonaNormalFont text-xl">Implementing your project with scalable architecture design,modern technology, and an excellent level of data security.</p>
                         </div>
                     </div>
-                    <div className="md:w-1/1 px-14 pt-20">
+                    <div className="md:w-2/3 pt-20 pr-20"> 
                         <Image src={Developmenpic} alt="Your Image" className={Style.Developmenpic} />
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Services = () => {
                         <div class="mt-10 md:mt-20">
                             <span class="font-ZonaNormalFont pb-10 block">Development</span>
                             <h3 class="text-4xl font-ZonaSemiFont mb-6">Web Services</h3>
-                            <p class="font-ZonaThinFont text-sm">We create web products tailored exclusively for your business goals, be it a high converting landing page, a complex web app to automate your processes or a high-load platform with sensitive data. </p>
+                            <p class="font-ZonaNormalFont text-sm">We create web products tailored exclusively for your business goals, be it a high converting landing page, a complex web app to automate your processes or a high-load platform with sensitive data. </p>
                             <button class=" font-ZonaNormalFont p-4 pl-10 pr-10 mt-12 rounded-3xl border border-gray-500 rounded-md hover:bg-gray-100 hover:border-gray-600">View more</button>
                         </div>
                     </div>
