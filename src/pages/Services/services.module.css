@@ -26,9 +26,33 @@
     top: 180px;
     bottom: 80px;
     left: calc(50% + 80px);
-    width: 500px;
+    width: 600px;
     max-width: 53=0px;
     height: 400px;
+    overflow: hidden;
+    margin-bottom: -60vh
+}
+
+.Nativess {
+    position: sticky;
+    top: 180px;
+    bottom: 80px;
+    left: calc(50% + 80px);
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -60vh
+}
+
+.CrossyPic {
+    position: sticky;
+    top: 180px;
+    bottom: 80px;
+    left: calc(50% + 80px);
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
     overflow: hidden;
     margin-bottom: -60vh
 }
