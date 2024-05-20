@@ -13,12 +13,12 @@ const Header = forwardRef(function index(props, ref) {
             <div className={`${style.HeaderBackground} px-8 py-6 flex items-center justify-between`}>
                 <p className="font-ZonaSemiFont text-2xl font-thin">Ronas.</p>
                 <div className="flex items-center justify-content">
-                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/">Services</a>
-                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition  " href="/">Design Projects</a>
-                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/">Cases</a>
-                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/">About</a>
-                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/">How we work</a>
-                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/">Blog</a>
+                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/Services">Services</a>
+                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition  " href="/designProjects">Design Projects</a>
+                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/cases">Cases</a>
+                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/about">About</a>
+                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/how-we-work">How we work</a>
+                    <a className="font-ZonaSemiFont text-1xl font-thin px-8 hover:text-blue-300 transition " href="/blog">Blog</a>
                     <div onClick={()=>setTheme(resolvedTheme === 'dark'?'light':'dark')} className={`${style.ThemeToggle} mr-8 justify-${resolvedTheme === 'dark'?'end':'start'}`}>
                         <span className={style.toggleBtn}></span>
                     </div>

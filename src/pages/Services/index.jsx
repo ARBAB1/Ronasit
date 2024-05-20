@@ -15,7 +15,7 @@ import Style from "./services.module.css"
 const Services = () => {
     return (
         <>
-            {/* <Header /> */}
+            <Header />
             <div className="mt-10 md:mt-24 px-4 md:px-0 md:pl-20">
                 <p className="font-ZonaNormalFont text-lg md:text-base mb-4 md:mb-8 pl-4 md:pl-10">Services</p>
                 <p className="text-5xl md:text-5xl font-ZonaSemiFont pl-4 md:pl-10 md:leading-tight">
