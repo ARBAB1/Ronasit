@@ -7,7 +7,7 @@ import Design from '../../../src/assets/Images/Design.jpg'
 import webplatform from '../../../src/assets/Images/webplatform.jpg'
 import Strategy from '../../../src/assets/Images/Strategy.jpg'
 import Artwork from '../../../src/assets/Images/Artwork.jpg'
-import maintenance from '../../../src/assets/Images/Maintenance.jpg'
+import maintenance from '../../../src/assets/Images/maintenance.jpg'
 import CrossyPic from '../../../src/assets/Images/CrossyPic.jpg'
 import Image from 'next/image';
 import Style from "./services.module.css"
