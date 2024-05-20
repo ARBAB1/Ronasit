@@ -1,0 +1,122 @@
+.SocialLinkLeft{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height:280px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SocilaLink{
+    height:35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 50%;
+    margin-block:5px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Developmenpic {
+    position: sticky;
+    top: 180px;
+    bottom: 80px;
+    left: calc(50% + 80px);
+    width: 600px;
+    max-width: 53=0px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: -60vh
+}
+
+.Nativess {
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -60vh
+}
+
+.bicycle {
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -60vh
+}
+
+.Design {
+    position: sticky;
+    top: 30px;
+    bottom: 80px;
+    left: calc(50% + 20px);
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -20vh
+}
+
+.webplatform {
+    position: sticky;
+    top: 120px;
+    bottom: 80px;
+    left: calc(50% + 20px);
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -80vh     
+}
+
+.Strategy {
+    position: sticky;
+    top: 30px;
+    bottom: 80px;
+    left: calc(50% + 20px);
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -20vh
+}
+
+.Artwork {
+    position: sticky;
+    top: 30px;
+    bottom: 80px;
+    left: calc(50% + 20px);
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -20vh
+}
+
+.maintenance {
+    position: sticky;
+    top: 500px;
+    bottom: 200px;
+    left: calc(50% + 80px);
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -60vh
+}
+
+.CrossyPic {
+    position: sticky;
+    top: 30px;
+    bottom: 80px;
+    left: calc(50% + 20px);
+    width: 550px;
+    max-width: 53=0px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: -20vh
+}
