@@ -12,39 +12,105 @@ import { RiLinkedinLine } from "react-icons/ri";
 import 'animate.css';
 import Footer from '@/components/footer';
 import SecondaryFooter from '@/components/secondaryFooter';
+import { SiUpwork } from "react-icons/si";
+import { BsFillStarFill } from "react-icons/bs";
 
-const inter = Inter({ subsets: ["latin"] });
+
+
+
+const VisibilityObserver = ({ id, children, onVisible, className }) => {
+  const componentRef = useRef(null);
+
+  useEffect(() => {
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          onVisible(id);
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (componentRef.current) {
+      observer.observe(componentRef.current);
+    }
+
+    return () => {
+      if (componentRef.current) {
+        observer.unobserve(componentRef.current);
+      }
+    };
+  }, [id, onVisible]);
+
+  return (
+    <div ref={componentRef} id={id} className={className}>
+      {children}
+    </div>
+  );
+};
 
 export default function Home() {
   const stickyElement = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const targetRef = useRef(null);
+  const [visibleComponent, setVisibleComponent] = useState(null);
 
+  const handleVisibilityChange = (id) => {
+    setTimeout(() => {
+      setVisibleComponent(id);
+    }, 200);
+  };
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-        } else {
-          setIsVisible(false);
+          setProgress(0);
         }
-      });
-    }, options);
+      },
+      { threshold: 0.1 }
+    );
 
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-    }
+    observer.observe(document.getElementById('your-component'));
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      const handleScroll = () => {
+        const scrollFactor = 1.2;
+        const newProgress = (window.scrollY / (document.body.clientHeight - window.innerHeight)) * scrollFactor;
+        setProgress(Math.min(newProgress, 2));
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, [isVisible]);
+
+  const makeClipPath = (progress, endSize, x) => {
+    let progressSize = endSize * progress;
+    let size = Math.max(0, Math.min(progressSize, endSize));
+    let y = Math.min((100 - endSize) + progressSize, 100);
+
+    return `circle(${size}% at ${x}% ${y}%)`;
+  };
+
+  const clipPath = makeClipPath(progress, 175, 50);
+  const opacity = Math.min(progress * 5, 1);
 
 
   return (
@@ -263,43 +329,522 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
-        <h5 className='text-3xl font-ZonaNormalFont'>
-          As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
-        </h5>
-        <br />
-        <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
-      </div>
-      <div ref={targetRef} className="container pt-28 mx-auto lg:px-28 sm:px-4">
-        <div className="grid md:grid-cols-6">
-          <div className="p-12 m-2 lg:col-span-3 sm:col-span-6 animate__animated animate__fadeInUp" >
+
+
+      <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
+        <div className="grid md:grid-cols-12">
+
+          <div className="p-12 m-2 lg:col-span-7 sm:col-span-12 animate__animated animate__fadeInUp">
+            <div className='h-72 mb-96'>
+              <h3 className='font-ZonaNormalFont text-3xl leading-normal'>As an IT service company, we are <br/> not only releasing successful <br/> projects but also constantly <br/> sharing our experience.
+                <br/>
+                <br/>
+                Take a look at some projects <br/> that we have implemented.</h3>
+            </div>
+
+            <div className='py-72' id="your-component">
+              <div className='flex items-center py-8'>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='pl-1 pr-8'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+
+
+                <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
+                  <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
+                </div>
+              </div>
+              <h1 className='font-ZonaSemiFont text-5xl leading-10	leading-snug'>
+                Ronas IT demonstrates an excellent understanding of user needs and all of their designs are creative and elegant in their simplicity. They’re very well thought out and have an excellent response to feedback. All of these qualities are why they’re our go-to user experience experts.
+              </h1>
+            </div>
+
+            <div className='py-72' id="visible2">
+              <div className='flex items-center py-8'>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='pl-1 pr-8'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+
+
+                <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
+                  <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
+                </div>
+              </div>
+              <h1 className='font-ZonaSemiFont text-5xl leading-10	leading-snug'>
+                Fantastic service. The guys went above and beyond. They also suggested improvements to my app which I really appreciated - as apposed to doing exactly what I asked, it resulted in a better product. I also had a view of project progress and things that were done and getting done. Very effective.              </h1>
+            </div>
+
+            <div id="visible3" className='py-72'>
+              <div className='flex items-center py-8'>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='pl-1 pr-8'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+
+
+                <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
+                  <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
+                </div>
+              </div>
+              <h1 className='font-ZonaSemiFont text-5xl leading-10	leading-snug'>
+                A technically skilled team, Ronas IT goes the extra mile to deliver high-quality solutions. With a broad understanding of both the product and current technologies, they provide impactful, timely, and flexible support.              </h1>
+            </div>
+
+            <div id="visible4" className='py-72'>
+              <div className='flex items-center py-8'>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='pl-1 pr-8'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+
+
+                <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
+                  <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
+                </div>
+              </div>
+              <h1 className='font-ZonaSemiFont text-5xl leading-10	leading-snug'>
+                The quality of their work stands out the most. They’re knowledgeable and provide useful feedback.
+              </h1>
+            </div>
+
+
+
+
           </div>
 
-
-
-          <div className={`p-12 m-2 lg:col-span-3 sm:col-span-6 ${isVisible ? Style.visibleClass : Style.InvisibleClass}`}>
-            <div className={Style.BorderGlassOne}></div>
+          <div className={`m-2 lg:col-span-5 sm:col-span-12 ${Style.visibleClass2}`}>
+            <div style={{ height: '100%', width: "100%", position: 'relative' }}>
+              <div className="expand" style={{
+                position: 'absolute',
+                bottom: 0,
+                clipPath: clipPath,
+                opacity: opacity,
+                transition: 'clip-path 0.1s, opacity 0.1s',
+                transform: 'rotate(180deg)',
+              }}>
+                <img src="https://ronasit.com/_next/image/?url=%2F_next%2Fst…ia%2Fhome-delivery-dark.7ed863bf.jpeg&w=1920&q=75" alt="" />
+              </div>
+            </div>
           </div>
 
 
         </div>
       </div>
-      <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
-        <h5 className='text-3xl font-ZonaNormalFont'>
-          As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
-        </h5>
-        <br />
-        <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
+
+
+
+      <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
+        <div className="grid md:grid-cols-12">
+          <div className={`p-12 m-2 lg:col-span-3 sm:col-span-12 ${Style.visibleClass}`}>
+
+
+            <div className='pb-6'>
+              <div className={`h-16 w-16 bg-white rounded-full mb-4 transition duration-300 ease-in-out ${visibleComponent == "visible1" ? "border-4 border-theme-blue" : ""}`}>
+                <img className='h-full w-full rounded-full' src="https://ronasit.com/_next/image/?url=%2Fimg%2Favatar-1.webp&w=48&q=75" alt="" />
+              </div>
+              <h6 className='font-ZonaNormalFont text-base '>Bob Glazebrook</h6>
+              <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
+            </div>
+
+
+
+            <div className='pb-6'>
+              <div className={`h-16 w-16 bg-white rounded-full mb-4 transition duration-300 ease-in-out ${visibleComponent == "visible2" ? "border-4 border-theme-blue" : ""}`}>
+                <img className='h-full w-full rounded-full' src="https://ronasit.com/_next/image/?url=%2Fimg%2Favatar-1.webp&w=48&q=75" alt="" />
+              </div>
+              <h6 className='font-ZonaNormalFont text-base '>Bob Glazebrook</h6>
+              <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
+            </div>
+
+
+            <div className='pb-6'>
+              <div className={`h-16 w-16 bg-white rounded-full mb-4 transition duration-300 ease-in-out ${visibleComponent == "visible3" ? "border-4 border-theme-blue" : ""}`}>
+                <img className='h-full w-full rounded-full' src="https://ronasit.com/_next/image/?url=%2Fimg%2Favatar-1.webp&w=48&q=75" alt="" />
+              </div>
+              <h6 className='font-ZonaNormalFont text-base '>Bob Glazebrook</h6>
+              <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
+            </div>
+
+
+            <div className='pb-6'>
+              <div className={`h-16 w-16 bg-white rounded-full mb-4 transition duration-300 ease-in-out ${visibleComponent == "visible4" ? "border-4 border-theme-blue" : ""}`}>
+                <img className='h-full w-full rounded-full' src="https://ronasit.com/_next/image/?url=%2Fimg%2Favatar-1.webp&w=48&q=75" alt="" />
+              </div>
+              <h6 className='font-ZonaNormalFont text-base '>Bob Glazebrook</h6>
+              <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
+            </div>
+          </div>
+
+
+          <div className="p-12 m-2 lg:col-span-9 sm:col-span-12 animate__animated animate__fadeInUp">
+
+
+
+
+            <VisibilityObserver className='py-72' id="visible1" onVisible={handleVisibilityChange}>
+              <div className='flex items-center py-8'>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='pl-1 pr-8'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+
+
+                <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
+                  <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
+                </div>
+              </div>
+              <h1 className='font-ZonaSemiFont text-5xl leading-10	leading-snug'>
+                Ronas IT demonstrates an excellent understanding of user needs and all of their designs are creative and elegant in their simplicity. They’re very well thought out and have an excellent response to feedback. All of these qualities are why they’re our go-to user experience experts.
+              </h1>
+            </VisibilityObserver>
+
+            <VisibilityObserver className='py-72' id="visible2" onVisible={handleVisibilityChange}>
+              <div className='flex items-center py-8'>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='pl-1 pr-8'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+
+
+                <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
+                  <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
+                </div>
+              </div>
+              <h1 className='font-ZonaSemiFont text-5xl leading-10	leading-snug'>
+                Fantastic service. The guys went above and beyond. They also suggested improvements to my app which I really appreciated - as apposed to doing exactly what I asked, it resulted in a better product. I also had a view of project progress and things that were done and getting done. Very effective.              </h1>
+            </VisibilityObserver>
+
+            <VisibilityObserver id="visible3" onVisible={handleVisibilityChange} className='py-72'>
+              <div className='flex items-center py-8'>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='pl-1 pr-8'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+
+
+                <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
+                  <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
+                </div>
+              </div>
+              <h1 className='font-ZonaSemiFont text-5xl leading-10	leading-snug'>
+                A technically skilled team, Ronas IT goes the extra mile to deliver high-quality solutions. With a broad understanding of both the product and current technologies, they provide impactful, timely, and flexible support.              </h1>
+            </VisibilityObserver>
+
+            <VisibilityObserver id="visible4" onVisible={handleVisibilityChange} className='py-72'>
+              <div className='flex items-center py-8'>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='px-1'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+                <div className='pl-1 pr-8'>
+                  <BsFillStarFill color='#ef4335' size={28} />
+                </div>
+
+
+                <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
+                  <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
+                </div>
+              </div>
+              <h1 className='font-ZonaSemiFont text-5xl leading-10	leading-snug'>
+                The quality of their work stands out the most. They’re knowledgeable and provide useful feedback.
+              </h1>
+            </VisibilityObserver>
+
+
+
+
+          </div>
+        </div>
       </div>
-      <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
-        <h5 className='text-3xl font-ZonaNormalFont'>
-          As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
-        </h5>
-        <br />
-        <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
+
+
+
+
+      <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
+        <div className="grid md:grid-cols-12">
+
+          <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
+            <p className="font-ZonaBoldFont text-3xl">Numbers</p>
+          </div>
+
+          <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
+            <h4 className="font-ZonaBoldFont text-6xl">1870</h4>
+            <p className='font-ZonaNormalFont text-xl pt-2'>reviews<br />across 5 platforms</p>
+          </div>
+
+          <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
+            <h4 className="font-ZonaBoldFont text-6xl">Top 50</h4>
+            <p className='font-ZonaNormalFont text-xl pt-2'>app development<br />companies on</p>
+          </div>
+
+
+          <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
+            <h4 className="font-ZonaBoldFont text-6xl">4.9 / 5</h4>
+            <p className='font-ZonaNormalFont text-xl pt-2'>average rate</p>
+          </div>
+
+          <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
+          </div>
+
+
+          <div className="flex p-12 m-2 grid md:grid-cols-12 lg:col-span-9 sm:col-span-12 animate__animated animate__fadeInUp">
+            <div className='lg:col-span-6'>
+              <div className='flex items-center'>
+                <div className='h-24 w-24 rounded-full border	flex items-center justify-center'>
+                  <SiUpwork color='#14a800' size={42} />
+                </div>
+                <div>
+                  <div className='flex items-center pl-3'>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <p className='font-ZonaNormalFont text-base pt-2'>4.9</p>
+                    </div>
+                  </div>
+                  <div className='pl-4'>
+                    <h6 className='font-ZonaBoldFont text-base pt-2'>1813 reviews</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div className='flex items-center mt-12'>
+                <div className='h-24 w-24 rounded-full border	flex items-center justify-center'>
+                  <SiUpwork color='#14a800' size={42} />
+                </div>
+                <div>
+                  <div className='flex items-center pl-3'>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <p className='font-ZonaNormalFont text-base pt-2'>4.9</p>
+                    </div>
+                  </div>
+                  <div className='pl-4'>
+                    <h6 className='font-ZonaBoldFont text-base pt-2'>1813 reviews</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div className='flex items-center mt-12'>
+                <div className='h-24 w-24 rounded-full border	flex items-center justify-center'>
+                  <SiUpwork color='#14a800' size={42} />
+                </div>
+                <div>
+                  <div className='flex items-center pl-3'>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <p className='font-ZonaNormalFont text-base pt-2'>4.9</p>
+                    </div>
+                  </div>
+                  <div className='pl-4'>
+                    <h6 className='font-ZonaBoldFont text-base pt-2'>1813 reviews</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='lg:col-span-6'>
+              <div className='flex items-center'>
+                <div className='h-24 w-24 rounded-full border	flex items-center justify-center'>
+                  <SiUpwork color='#14a800' size={42} />
+                </div>
+                <div>
+                  <div className='flex items-center pl-3'>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <p className='font-ZonaNormalFont text-base pt-2'>4.9</p>
+                    </div>
+                  </div>
+                  <div className='pl-4'>
+                    <h6 className='font-ZonaBoldFont text-base pt-2'>1813 reviews</h6>
+                  </div>
+                </div>
+              </div>
+              <div className='flex items-center mt-12'>
+                <div className='h-24 w-24 rounded-full border	flex items-center justify-center'>
+                  <SiUpwork color='#14a800' size={42} />
+                </div>
+                <div>
+                  <div className='flex items-center pl-3'>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <BsFillStarFill color='#ef4335' size={22} />
+                    </div>
+                    <div className='px-1'>
+                      <p className='font-ZonaNormalFont text-base pt-2'>4.9</p>
+                    </div>
+                  </div>
+                  <div className='pl-4'>
+                    <h6 className='font-ZonaBoldFont text-base pt-2'>1813 reviews</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='lg:col-span-4 h-72 flex items-center justify-start'>
+              <img src="https://ronasit.com/_next/static/media/clutch-dark-1.bc510330.svg" alt="" />
+            </div>
+            <div className='lg:col-span-4 h-72 flex items-center justify-center'>
+              <img src="https://ronasit.com/_next/static/media/clutch-dark-1.bc510330.svg" alt="" />
+            </div>
+            <div className='lg:col-span-4 h-72 flex items-center justify-end'>
+              <img src="https://ronasit.com/_next/static/media/clutch-dark-1.bc510330.svg" alt="" />
+            </div>
+          </div>
+
+        </div>
       </div>
-      <SecondaryFooter/>
-      <Footer/>
+      <SecondaryFooter />
+      <Footer />
 
 
     </>

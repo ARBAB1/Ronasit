@@ -7,13 +7,13 @@ const Footer = () => {
                 <div className="grid md:grid-cols-12">
 
 
-                    <div className="p-12 h-72 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
+                    <div className="p-12 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
                         <h6 className='text-lg font-ZonaBoldFont'>Call</h6>
                         <p className='text-base	font-ZonaNormalFont text-theme-gray pt-3'>+372 5399 9974</p>
                     </div>
 
 
-                    <div className="p-12 h-72 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
+                    <div className="p-12 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
                         <h6 className='text-lg font-ZonaBoldFont'>Write</h6>
                         <p className='text-base font-ZonaNormalFont text-theme-gray pt-3'>hello@ronasit.com</p>
                         <p className='text-base font-ZonaNormalFont text-theme-gray pt-3'>Telegram</p>
@@ -21,7 +21,7 @@ const Footer = () => {
                     </div>
 
 
-                    <div className="p-12 h-72 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
+                    <div className="p-12 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
                         <h6 className='text-lg font-ZonaBoldFont'>Legal Address</h6>
                         <p className='text-base	font-ZonaNormalFont text-theme-gray pt-3'>10151<br />
                             Ahtri 12<br />
@@ -30,7 +30,7 @@ const Footer = () => {
 
 
 
-                    <div className='py-6 px-12 lg:col-span-12 sm:col-span-12 flex items-center justify-between'>
+                    <div className='pb-6 pt-12 px-12 lg:col-span-12 sm:col-span-12 flex items-center justify-between'>
                         <div>
                             <p className='text-base	font-ZonaNormalFont text-theme-gray pt-3'>© 2024 Ronas IT.<br />all rights reserved.</p>
                         </div>

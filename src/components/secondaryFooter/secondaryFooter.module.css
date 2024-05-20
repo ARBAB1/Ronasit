@@ -1,0 +1,54 @@
+.GetInTouch {
+    display: inline-block;
+    line-height: normal;
+    position: relative;
+    cursor: pointer;
+}
+
+.GetInTouch:before {
+    mask: url('https://ronasit.com/_next/static/media/underline-3.cf6fc523.svg');
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    height: 11px;
+    bottom: 30px;
+    left: 0;
+    background: white;
+    content: "";
+}
+
+.GetInTouch:hover:before {
+    animation: GetInTouchAnimation 2s linear infinite;
+}
+
+.GetInTouch:hover:after {
+    width: 100%;
+    transition-timing-function: cubic-bezier(.2, 0, 0, 1);
+    background: linear-gradient(190.05deg, #98e8fc -16.32%, #1fa9ff 56.32%, #8980f6 115.25%);
+    animation: GetInTouchAnimation 2s linear infinite;
+}
+
+.GetInTouch:after {
+    mask: url('https://ronasit.com/_next/static/media/underline-3.cf6fc523.svg');
+    width: 0;
+    transition: all .6s;
+    background: linear-gradient(190.05deg, #98e8fc -16.32%, #1fa9ff 56.32%, #8980f6 115.25%);
+    position: absolute;
+    height: 11px;
+    bottom: 30px;
+    left: 0;
+    content: "";
+}
+
+
+@keyframes GetInTouchAnimation {
+    0% {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    100% {
+        -webkit-mask-position: 114px 0;
+        mask-position: 114px 0;
+    }
+}

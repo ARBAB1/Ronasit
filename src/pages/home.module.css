@@ -275,19 +275,19 @@
 
 
 .visibleClass {
-    height: 70vh;
-    width: 500px;
-    background-color: black;
-    position: fixed;
-    bottom: 10vh;
-    right: 40vh;
-    transition: 0.6s all;
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 120px !important;
+    height: 80vh;
 }
 
+.visibleClass2 {
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 120px !important;
+    height: 80vh;
+    overflow: hidden;
+}
 .BorderGlassOne {
     position: absolute;
     width: 100%;
@@ -311,8 +311,4 @@
         border-top-left-radius: 0%;
         border-top-right-radius: 0%;
     }
-}
-
-.InvisibleClass {
-    opacity: 0;
 }
