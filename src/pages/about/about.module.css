@@ -1,0 +1,14 @@
+.image_parallaximage{
+    padding-top: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.parallax_image_parallaximage{
+    position: absolute;
+    height: 125%;
+    width: 100%;
+    top: -50%;
+    object-fit: cover;
+    left: 0;
+    transition: .01s linear;
+}

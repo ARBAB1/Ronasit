@@ -10,7 +10,8 @@ import { IoBasketballOutline } from "react-icons/io5";
 import { GrUnlink } from "react-icons/gr";
 import { RiLinkedinLine } from "react-icons/ri";
 import 'animate.css';
-
+import Footer from '@/components/footer';
+import SecondaryFooter from '@/components/secondaryFooter';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,13 +54,13 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center h-screen relative">
         <div className="flex items-center justify-center">
           <h1 className={`relative font-ZonaSemiFont text-6xl font-thin cursor-pointer px-2`}>
-            <a href="" className={Style.DesignElement1}>Design.</a>
+            <a href="" className={`${Style.DesignElement1} before:dark:bg-white after:bg-white before:bg-white after:bg-white`}>Design.</a>
           </h1>
           <h1 className={`relative font-ZonaSemiFont text-6xl font-thin cursor-pointer  px-2`}>
-            <a href="" className={Style.DesignElement2}>Development.</a>
+            <a href="" className={`${Style.DesignElement2} before:bg-white after:bg-white`}>Development.</a>
           </h1>
           <h1 className={`relative font-ZonaSemiFont text-6xl font-thin cursor-pointer  px-2`}>
-            <a href="" className={Style.DesignElement3}>Maintenance.</a>
+            <a href="" className={`${Style.DesignElement3} before:bg-white after:bg-white`}>Maintenance.</a>
           </h1>
         </div>
         <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" className={`absolute ${Style.showreel_showreel_text}`}>
@@ -83,18 +84,15 @@ export default function Home() {
           </video>
         </div>
         <div className={Style.SocialLinkLeft}>
-          <div className={Style.SocilaLink}><FaInstagram color="black" size={22} /></div>
-          <div className={Style.SocilaLink}><BiLogoFacebook color="black" size={24} /></div>
-          <div className={Style.SocilaLink}><IoBasketballOutline color="black" size={24} /></div>
-          <div className={Style.SocilaLink}><FaBehance color="black" size={22} /></div>
-          <div className={Style.SocilaLink}><RiLinkedinLine color="black" size={22} /></div>
+          <div className={`${Style.SocilaLink} bg-black dark:bg-white`}><FaInstagram color="black" size={22} /></div>
+          <div className={`${Style.SocilaLink} bg-black dark:bg-white`}><BiLogoFacebook color="black" size={24} /></div>
+          <div className={`${Style.SocilaLink} bg-black dark:bg-white`}><IoBasketballOutline color="black" size={24} /></div>
+          <div className={`${Style.SocilaLink} bg-black dark:bg-white`}><FaBehance color="black" size={22} /></div>
+          <div className={`${Style.SocilaLink} bg-black dark:bg-white`}><RiLinkedinLine color="black" size={22} /></div>
         </div>
       </div>
-
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-6">
-
           <div className="px-12 m-2 lg:col-span-6 sm:col-span-6 animate__animated animate__fadeInUp">
             <p className="font-ZonaNormalFont text-lg">What We Do</p>
           </div>
@@ -111,8 +109,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-6">
           <div className="p-12 m-2 lg:col-span-3 sm:col-span-6 animate__animated animate__fadeInUp">
@@ -143,8 +139,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-6">
 
@@ -187,8 +181,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-6">
 
@@ -231,8 +223,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-6">
           <div className="px-12 m-2 lg:col-span-6 sm:col-span-6 animate__animated animate__fadeInUp">
@@ -264,8 +254,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
       <div className={`py-20 flex items-center justify-center flex-col ${Style.MVPBanner}`}>
         <h3 className="font-ZonaBoldFont text-5xl">MVP calculator</h3>
         <div className="font-ZonaNormalFont text-center pt-6" style={{ width: '36rem' }}>
@@ -275,8 +263,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-
-
       <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
         <h5 className='text-3xl font-ZonaNormalFont'>
           As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
@@ -284,9 +270,6 @@ export default function Home() {
         <br />
         <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
       </div>
-
-
-
       <div ref={targetRef} className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-6">
           <div className="p-12 m-2 lg:col-span-3 sm:col-span-6 animate__animated animate__fadeInUp" >
@@ -301,9 +284,6 @@ export default function Home() {
 
         </div>
       </div>
-
-
-
       <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
         <h5 className='text-3xl font-ZonaNormalFont'>
           As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
@@ -311,9 +291,6 @@ export default function Home() {
         <br />
         <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
       </div>
-
-
-
       <div className='container pt-28 mx-auto lg:px-28 sm:px-4' style={{ height: "100vh" }}>
         <h5 className='text-3xl font-ZonaNormalFont'>
           As an IT service company, we are<br/> not only releasing successful<br/> projects but also constantly<br/> sharing our experience.
@@ -321,6 +298,9 @@ export default function Home() {
         <br />
         <h5 className='text-3xl font-ZonaNormalFont '>Take a look at some projects<br/> that we have implemented.</h5>
       </div>
+      <SecondaryFooter/>
+      <Footer/>
+
 
     </>
   );
