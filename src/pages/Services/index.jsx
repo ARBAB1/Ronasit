@@ -207,34 +207,8 @@ const Services = () => {
             <div className="mt-10 md:mt-96 px-4 md:px-0 md:pl-16">
                 <h1 className="font-ZonaSemiFont text-lg md:text-5xl mb-4 md:mb-8 pl-4 md:pl-10">Benefits working with us</h1>
             </div>
-            <div class="flex flex-wrap justify-center">
-                <div class="flex flex-col items-center mx-4 my-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-2" fill="#03030F" viewBox="0 0 56 168">
-                    </svg>
-                    <h4 class="text-lg font-bold text-gray-800 mb-2">Flexible work terms</h4>
-                    <span class="text-sm text-gray-600">We can adjust our terms according to your project needs and goals – fixed budget basis, Time and Materials framework, weekly budget, etc. Let’s discuss and find what would work best for you.</span>
-                </div>
-                <div class="flex flex-col items-center mx-4 my-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-2" fill="#03030F" viewBox="0 0 56 168">
-                    </svg>
-                    <h4 class="text-lg font-bold text-gray-800 mb-2">Flexible work terms</h4>
-                    <span class="text-sm text-gray-600">Description</span>
-                </div>
-            </div>
-            <div class="flex flex-wrap justify-center">
-                <div class="flex flex-col items-center mx-4 my-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-2" fill="#03030F" viewBox="0 0 56 168">
-                    </svg>
-                    <h4 class="text-lg font-bold text-gray-800 mb-2">Title</h4>
-                    <span class="text-sm text-gray-600">Description</span>
-                </div>
-                <div class="flex flex-col items-center mx-4 my-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-2" fill="#03030F" viewBox="0 0 56 168">
-                    </svg>
-                    <h4 class="text-lg font-bold text-gray-800 mb-2">Title</h4>
-                    <span class="text-sm text-gray-600">Description</span>
-                </div>
-            </div>
+          
+           
 
         </>
     );
