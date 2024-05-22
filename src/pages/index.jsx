@@ -329,8 +329,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-12">
 
@@ -475,9 +473,6 @@ export default function Home() {
 
         </div>
       </div>
-
-
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-12">
           <div className={`p-12 m-2 lg:col-span-3 sm:col-span-12 ${Style.visibleClass}`}>
@@ -642,10 +637,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
-
-
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-12">
 
