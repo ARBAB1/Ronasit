@@ -118,9 +118,9 @@ export default function Home() {
       <Header ref={stickyElement} />
       <StickyCursor stickyElement={stickyElement} />
       <div className="flex flex-col items-center justify-center h-screen relative">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center lg:md  :flex-col">
           <h1 className={`relative font-ZonaSemiFont text-6xl font-thin cursor-pointer px-2`}>
-            <a href="" className={`${Style.DesignElement1} before:dark:bg-white after:bg-white before:bg-white after:bg-white`}>Design.</a>
+            <a href="" className={`${Style.DesignElement1} before:dark:bg-white after:bg-white before:bg-whit`}>Design.</a>
           </h1>
           <h1 className={`relative font-ZonaSemiFont text-6xl font-thin cursor-pointer  px-2`}>
             <a href="" className={`${Style.DesignElement2} before:bg-white after:bg-white`}>Development.</a>
@@ -157,19 +157,21 @@ export default function Home() {
           <div className={`${Style.SocilaLink} bg-black dark:bg-white`}><RiLinkedinLine color="black" size={22} /></div>
         </div>
       </div>
-      <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
-        <div className="grid md:grid-cols-6">
-          <div className="px-12 m-2 lg:col-span-6 sm:col-span-6 animate__animated animate__fadeInUp">
+
+      
+      <div className="w-100">
+        <div className="grid md:grid-cols-12">
+          <div className="px-12 m-2 lg:col-span-12 sm:col-span-12 md:col-span-12 animate__animated animate__fadeInUp">
             <p className="font-ZonaNormalFont text-lg">What We Do</p>
           </div>
 
-          <div className="p-12 m-2 lg:col-span-4 sm:col-span-4 animate__animated animate__fadeInUp">
+          <div className="p-12 m-2 lg:col-span-8 sm:col-span-12 md:col-span-12 animate__animated animate__fadeInUp">
             <h2 className="text-5xl font-ZonaBoldFont leading-tight	mb-12">Ronas IT is an engineering company that provides professional IT services for entrepreneurs and <br /> companies around the world.
             </h2>
             <button className="font-ZonaBoldFont px-14 py-5 border rounded-full">View More</button>
           </div>
 
-          <div className="p-12 m-2 lg:col-span-2 sm:col-span-4 animate__animated animate__fadeInUp">
+          <div className="p-12 m-2 lg:col-span-4 sm:col-span-12 md:col-span-12 animate__animated animate__fadeInUp">
             <p className="font-ZonaNormalFont text-lg">We have been designing, developing, and maintaining apps since 2007.</p><br></br>
             <p className="font-ZonaNormalFont text-lg">Our goal is to create software solutions that match our clients’ needs and expectations. Ronas IT workflow is based on analytics and agile methodology that help us to provide high-quality IT services to small businesses and startups.</p>
           </div>
