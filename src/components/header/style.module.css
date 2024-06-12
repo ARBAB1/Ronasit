@@ -53,3 +53,13 @@
     border-radius: 16px;
     
 }
+
+.ResponsiveContainer{
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .HeaderBackground{
+        display: none;
+    }
+}

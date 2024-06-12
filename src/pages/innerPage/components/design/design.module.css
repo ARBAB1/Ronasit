@@ -1,0 +1,72 @@
+.secondContainer{
+    margin-top: 7rem;
+}
+
+
+.stickyside h1{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    top: 95px;
+}
+
+.content{
+    padding: 10px;
+    margin: 3rem 0;
+}
+
+.content h1{
+    color: #26a0f8;
+    font-size: 2.75rem;
+    line-height: 3.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;    
+}
+.content h3{
+    font-size: 1.875rem;
+    flex: 1 1;
+    line-height: 2.1875rem;
+    font-weight: 500;
+    white-space: pre-wrap;
+}
+
+.content p{
+    margin-top: 16px;
+}
+
+.content button{
+    border: 1px solid #ffffff;
+    padding: 15px 25px;
+    border-radius: 35px;
+    margin-top: 16px;
+}
+.content button{
+    animation: vibrate-slow 1s ease 0s 1 normal none;
+    
+}
+
+@keyframes vibrate-slow {
+			
+    0% {
+        transform:translate(0);
+    }
+    20% {
+        transform:translate(2px,-2px);
+    }
+    40% {
+        transform:translate(2px,2px);
+    }
+    60% {
+        transform:translate(-2px,2px);
+    }
+    80% {
+        transform:translate(-2px,-2px);
+    }
+    100% {
+        transform:translate(0);
+    }
+}

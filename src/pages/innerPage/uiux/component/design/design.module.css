@@ -1,0 +1,120 @@
+.container{
+    margin: 5rem 0rem;
+    padding: 0px 150px;
+}
+.secondContainer{
+    margin-top: 7rem;
+}
+
+
+.stickyside h1{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    top: 95px;
+}
+
+.content{
+    padding: 10px;
+    margin: 3rem 0;
+}
+
+.content h1{
+    color: #26a0f8;
+    font-size: 2.75rem;
+    line-height: 3.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;    
+}
+.content h3{
+    font-size: 1.875rem;
+    flex: 1 1;
+    line-height: 2.1875rem;
+    font-weight: 500;
+    white-space: pre-wrap;
+}
+
+.content p{
+    margin-top: 16px;
+}
+
+.content button{
+    border: 1px solid #ffffff;
+    padding: 15px 25px;
+    border-radius: 35px;
+    margin-top: 16px;
+}
+.content button{
+    animation: vibrate-slow 1s ease 0s 1 normal none;
+    
+}
+
+@keyframes vibrate-slow {
+			
+    0% {
+        transform:translate(0);
+    }
+    20% {
+        transform:translate(2px,-2px);
+    }
+    40% {
+        transform:translate(2px,2px);
+    }
+    60% {
+        transform:translate(-2px,2px);
+    }
+    80% {
+        transform:translate(-2px,-2px);
+    }
+    100% {
+        transform:translate(0);
+    }
+}
+.boxCont h1{
+    font-size: 1.875rem;
+    line-height: 38px;
+    color: #fff;
+    font-weight: 500;
+    margin: auto auto 35px;
+    position: relative;
+
+}
+
+.boxCont button{
+    width: 15rem;
+    position: relative;
+    z-index: 1;
+    padding: 15px 45px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 50px;
+    margin: 20px 0px;
+    font-size: 1rem;
+}
+.boxCont{
+    background-image: url('../../Images/call-to-action-4.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    max-width: 725px;
+    padding: 56px 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border-radius: 19px;
+}
+
+.SubContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

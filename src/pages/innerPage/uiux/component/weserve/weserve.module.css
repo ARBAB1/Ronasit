@@ -1,0 +1,45 @@
+.container{
+    margin: 5rem 0rem;
+    padding: 0px 150px;
+}
+
+.header h1{
+    font-size: 2.75rem;
+    line-height: 130%;
+    margin-bottom: 2rem;
+}
+.imageContext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.imageContext h1{
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin: 0 0 1.75rem;
+    line-height: 130%;
+    transition: all .5s;
+    max-width: 345px;
+}
+
+.imageContext p{
+    line-height: 130%;
+    margin-bottom: 2rem;
+
+}
+
+.headContainer{
+    padding: 25px;
+}
+.image{
+    padding: 25px;
+    margin: 5px;
+}
+.image h1{
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin:1.75rem 0;
+    line-height: 130%;
+    transition: all .5s;
+    max-width: 345px;
+}

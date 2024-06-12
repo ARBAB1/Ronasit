@@ -1,0 +1,70 @@
+.container{
+    margin: 5rem 0rem;
+    padding: 0;
+}
+
+.secondContainer{
+    padding: 0px 150px;
+}
+
+.headingContent h1{
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    margin-bottom: 1.75rem;
+    font-weight: 600;
+}
+
+.icondiv{
+    padding: 0;
+    width: 112px;
+    height: 112px;
+    position: relative;
+    margin-bottom: 2.25rem;
+    border-radius: 36px;
+    background-color: rgba(38, 160, 248, .1);
+}
+.icon{
+    --bg-position: -168px -205px;
+    font-size: 41px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: linear-gradient(190.05deg, #98e8fc -16.32%, #1fa9ff 56.32%, #8980f6 115.25%) !important;
+}
+
+
+.MobileServices h1{
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+    line-height: normal;
+    font-weight: 500;
+}
+
+.MobileServices p{
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.CostContainer{
+    display: flex;
+    background: rgba(38,160,248,.1);
+    margin: 0px 150px;
+    border-radius: 24px;
+    padding: 80px 60px;
+    gap: 150px;
+}
+
+.costbtn{
+    position: relative;
+    z-index: 1;
+    padding: 15px 45px;
+    display: inline-block;
+    vertical-align: top;
+    background: #ffffff;
+    color: black;
+    border-radius: 50px;
+    margin-top: 15px;
+}

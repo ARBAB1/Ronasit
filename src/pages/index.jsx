@@ -18,6 +18,7 @@ import { motion } from 'framer-motion';
 
 
 
+
 const VisibilityObserver = ({ id, children, onVisible, className }) => {
   const componentRef = useRef(null);
 

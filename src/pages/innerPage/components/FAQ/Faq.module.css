@@ -1,0 +1,83 @@
+.container{
+  margin: 3rem 0rem ;
+}
+.SubContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.FaqText{
+    font-size: 2.75rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 40px;
+}
+.HeadinSide{
+  padding: 1rem;
+
+ 
+}
+.middleSide{
+  padding: 1rem;
+  width: 100%;
+}
+.RightSide{
+  padding: 1rem;
+}
+.BoxSide{
+  display: flex;
+  align-items: flex-start;
+  margin: 30px 0px;
+  /* padding: 1.5rem; */
+
+}
+.ContentBox{
+  /* margin: 0px 2rem; */
+  margin: 30px 50px;
+
+}
+.ContentBox h1{
+  font-size: 1.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 2.25rem;
+  
+}
+
+.Icon{
+  font-weight: 900;
+  color: #ef4335;
+}
+
+.Iconm{
+  font-weight: 900;
+  color: #ef4335;
+  animation: rotate-center 1s linear 0s 1 normal none;
+}
+
+@keyframes rotate-center {
+			
+  0% {
+    transform:rotate(0);
+  }
+  100% {
+    transform:rotate(180deg);
+  }
+}
+.ContentBox p{
+  animation: shutter-in-top 1s linear 0s 1 normal none;
+}
+
+@keyframes shutter-in-top {
+			
+  0% {
+    transform:rotateX(-100deg);
+    transform-origin:top;
+    opacity:0;
+  }
+  100% {
+    transform:rotateX(0deg);
+    transform-origin:top;
+    opacity:1;
+  }
+}

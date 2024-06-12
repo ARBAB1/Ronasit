@@ -1,5 +1,6 @@
 import React from 'react';
 import Style from './secondaryFooter.module.css'
+import Link from 'next/link';
 
 const SecondaryFooter = () => {
     return (
@@ -55,17 +56,18 @@ const SecondaryFooter = () => {
 
                     <div className="p-12 lg:col-span-4 sm:col-span-12 animate__animated animate__fadeInUp">
                     <h6 className='font-ZonaBoldFont pb-2'>Design</h6>
+                       
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Graphic design</p>
-                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Logos</p>
+                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><Link href={'/innerPage/logoDesign/LogoDesign'}>Logos</Link></p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Strategy and branding</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Illustration</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Web</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Creative landing pages</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Concept design services</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Desktop</p>
-                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Mobile app</p>
+                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><Link href={'./innerPage/app'}>Mobile app</Link></p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Tablet</p>
-                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>UI/UX design services</p>
+                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><Link href={'./innerPage/uiux/uiux'}>UI/UX design services</Link></p>
                     </div>
                 </div>
             </div>
