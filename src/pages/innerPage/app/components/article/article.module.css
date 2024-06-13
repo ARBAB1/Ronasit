@@ -1,0 +1,21 @@
+.container{
+    margin: 5rem 0rem;
+    padding: 0px 150px;
+}
+
+.how{
+    margin: 1rem 0rem;
+    font-weight: 600;
+    color: #3eb9fe;
+}
+.Head{
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.para{
+    font-size: .875rem;
+    color: hsla(0,0%,100%,.5);
+    margin-top: 0.5rem;
+}

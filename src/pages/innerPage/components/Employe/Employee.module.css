@@ -1,0 +1,6 @@
+.visibleClass {
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 120px !important;
+    height: 110vh;
+}

@@ -1,0 +1,36 @@
+.container{
+    padding: 0px 150px;
+    margin: 5rem 0rem;
+}
+
+.iconbox{
+    display: inline-block;
+    padding: 28px;
+    border-radius: 36px;
+    background-color: rgba(38, 160, 248, .1);
+    margin-bottom: 36px;
+}
+
+.heading{
+    font-size: 30px;
+    margin: 5rem 0rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+.smile{
+    color: #3eb9fe;
+    font-size: 48px; 
+}
+
+.smileheading{
+    font-size: 1.87rem;
+    line-height: 35px;
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+}
+
+.boxes{
+    padding: 0px 50px;
+}

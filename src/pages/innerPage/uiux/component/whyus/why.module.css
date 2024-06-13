@@ -1,0 +1,34 @@
+.container{
+    margin: 5rem 0rem;
+    padding: 0px 150px;
+}
+
+.Commonds{
+    padding: 10px;
+    }
+
+.subContainer h1{
+    display: block;
+    font-size: 3.75rem;
+    margin-bottom: 25px;
+    line-height: 1;
+    font-weight: 600;
+}    
+.sub2Container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+
+.Commonds h1{
+    display: block;
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.Commonds p{
+    line-height: 1.5;
+    display: inline-block;
+}
