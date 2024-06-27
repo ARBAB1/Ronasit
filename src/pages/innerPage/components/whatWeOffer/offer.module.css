@@ -1,70 +1,105 @@
-.container{
-    margin: 5rem 0rem;
-    padding: 0;
+.container {
+    margin: 5rem 5%; /* Adjusted margin for responsiveness */
+    padding: 0; /* Removed padding for responsiveness */
 }
 
-.secondContainer{
-    padding: 0px 150px;
+.secondContainer {
+    padding: 0 5%; /* Adjusted padding for responsiveness */
 }
 
-.headingContent h1{
-    font-size: 2.5rem;
-    line-height: 3.25rem;
-    margin-bottom: 1.75rem;
+.headingContent h1 {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+    line-height: 2.5rem; /* Adjusted line height for smaller screens */
+    margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
     font-weight: 600;
 }
 
-.icondiv{
-    padding: 0;
-    width: 112px;
-    height: 112px;
-    position: relative;
-    margin-bottom: 2.25rem;
-    border-radius: 36px;
-    background-color: rgba(38, 160, 248, .1);
-}
-.icon{
-    --bg-position: -168px -205px;
-    font-size: 41px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background: linear-gradient(190.05deg, #98e8fc -16.32%, #1fa9ff 56.32%, #8980f6 115.25%) !important;
+.icondiv {
+    width: 80px; /* Adjusted width for smaller screens */
+    height: 80px; /* Adjusted height for smaller screens */
+    margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
+    border-radius: 24px; /* Adjusted border radius for smaller screens */
 }
 
+.icon {
+    font-size: 30px; /* Adjusted font size for smaller screens */
+}
 
-.MobileServices h1{
-    font-size: 1.875rem;
-    margin-bottom: 1rem;
-    line-height: normal;
+.MobileServices h1 {
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 1rem; /* Adjusted margin for smaller screens */
+    line-height: normal; /* Reset line height to normal */
     font-weight: 500;
 }
 
-.MobileServices p{
-    font-size: 1rem;
-    line-height: 150%;
+.MobileServices p {
+    font-size: 0.875rem; /* Adjusted font size for smaller screens */
+    line-height: 1.5; /* Adjusted line height for smaller screens */
 }
 
-.CostContainer{
+.CostContainer {
     display: flex;
-    background: rgba(38,160,248,.1);
-    margin: 0px 150px;
+    flex-direction: column; /* Adjusted flex-direction for smaller screens */
+    background: rgba(38, 160, 248, 0.1);
+    margin: 0 5%; /* Adjusted margin for responsiveness */
     border-radius: 24px;
-    padding: 80px 60px;
-    gap: 150px;
+    padding: 5% 10%; /* Adjusted padding for responsiveness */
+    gap: 20px; /* Adjusted gap for smaller screens */
 }
 
-.costbtn{
-    position: relative;
-    z-index: 1;
-    padding: 15px 45px;
-    display: inline-block;
-    vertical-align: top;
-    background: #ffffff;
-    color: black;
-    border-radius: 50px;
-    margin-top: 15px;
+.costbtn {
+    padding: 10px 30px; /* Adjusted padding for smaller screens */
+    border-radius: 30px; /* Adjusted border radius for smaller screens */
+    margin-top: 10px; /* Adjusted margin for smaller screens */
+}
+
+/* Media Queries for finer adjustments */
+@media (min-width: 768px) {
+    .container {
+        margin: 5rem 0; /* Reset margin for larger screens */
+    }
+
+    .secondContainer {
+        padding: 0 150px; /* Retain original padding for larger screens */
+    }
+
+    .headingContent h1 {
+        font-size: 2.5rem; /* Restore original font size for larger screens */
+        line-height: 3.25rem; /* Restore original line height for larger screens */
+        margin-bottom: 1.75rem; /* Restore original margin for larger screens */
+    }
+
+    .icondiv {
+        width: 112px; /* Restore original width for larger screens */
+        height: 112px; /* Restore original height for larger screens */
+        margin-bottom: 2.25rem; /* Restore original margin for larger screens */
+        border-radius: 36px; /* Restore original border radius for larger screens */
+    }
+
+    .icon {
+        font-size: 41px; /* Restore original font size for larger screens */
+    }
+
+    .MobileServices h1 {
+        font-size: 1.875rem; /* Restore original font size for larger screens */
+        margin-bottom: 1rem; /* Restore original margin for larger screens */
+    }
+
+    .MobileServices p {
+        font-size: 1rem; /* Restore original font size for larger screens */
+        line-height: 150%; /* Restore original line height for larger screens */
+    }
+
+    .CostContainer {
+        flex-direction: row; /* Revert to original flex-direction for larger screens */
+        margin: 0 150px; /* Restore original margin for larger screens */
+        padding: 80px 60px; /* Restore original padding for larger screens */
+        gap: 150px; /* Restore original gap for larger screens */
+    }
+
+    .costbtn {
+        padding: 15px 45px; /* Restore original padding for larger screens */
+        border-radius: 50px; /* Restore original border radius for larger screens */
+        margin-top: 15px; /* Restore original margin for larger screens */
+    }
 }

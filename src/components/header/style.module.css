@@ -58,8 +58,93 @@
     display: none;
 }
 
+.REsrow{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.Reslogo{
+    display: flex;
+    align-items: center;
+}
+.rightside{
+    justify-content: end;
+    display: flex;
+    align-items: center;
+}
+
+.menulist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.menulist a{
+    margin: 10px;
+    font-size: 20px;
+}
+.menulist h1{
+    margin: 10px;
+    font-size: 20px;
+}
+.menulist p{
+    margin: 10px;
+    font-size: 20px;
+}
 @media screen and (max-width: 992px) {
     .HeaderBackground{
+        display: block;
+    }
+    .ResponsiveContainer{
         display: none;
+        margin: 0;
+        padding: 10px;
+        position: fixed;
+    }
+    .Resburger {
+        position: relative;
+        display: flex;
+        gap: 8px;
+        width: 140px;
+        flex-direction: column;
+        padding: 10px;
+        pointer-events: none;
+        border-radius: 100px;
+        overflow: hidden !important;
+    }
+    .Resbounds{
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .HeaderMenu{
+        width: 100%;
+        height: 100vh;
+        animation: shutter-in-bottom 1s linear 0s 1 normal none;
+        position: fixed;
+        top: 50px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px)s;
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(126, 126, 126, 0.17);
+        z-index: 99;
+    }
+    
+    
+}
+
+
+@keyframes shutter-in-bottom {
+			
+    0% {
+        transform:rotateX(100deg);
+        transform-origin:bottom;
+        opacity:0;
+    }
+    100% {
+        transform:rotateX(0);
+        transform-origin:bottom;
+        opacity:1;
     }
 }

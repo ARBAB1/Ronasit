@@ -58,16 +58,16 @@ const SecondaryFooter = () => {
                     <h6 className='font-ZonaBoldFont pb-2'>Design</h6>
                        
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Graphic design</p>
-                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><Link href={'/innerPage/logoDesign/LogoDesign'}>Logos</Link></p>
+                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><a href={'/innerPage/logoDesign/LogoDesign'}>Logos</a></p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Strategy and branding</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Illustration</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Web</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Creative landing pages</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Concept design services</p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Desktop</p>
-                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><Link href={'./innerPage/app'}>Mobile app</Link></p>
+                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><a href={'./innerPage/app'}>Mobile app</a></p>
                         <p className='font-ZonaThinFont py-2 text-white cursor-pointer'>Tablet</p>
-                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><Link href={'./innerPage/uiux/uiux'}>UI/UX design services</Link></p>
+                        <p className='font-ZonaThinFont py-2 text-white cursor-pointer'><a href={'./innerPage/uiux/uiux'}>UI/UX design services</a></p>
                     </div>
                 </div>
             </div>

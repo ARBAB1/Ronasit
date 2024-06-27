@@ -11,8 +11,8 @@ import 'animate.css';
 const Estimate = () => {
   return (
       <div className={`container mt-24`}>
-        <div className={`grid grid-cols-12 gap-4 `}>
-         <div className={`xlg:col-span-6 lg:col-span-6 md:col-span-12 sm:col-span-12 xm:col-span-12 ${styles.textContainer}`}>
+        <div className={`grid grid-cols-12 gap-4 ${styles.subContainer}`}>
+         <div className={`col-span-12 ${styles.textContainer}`}>
              <div className={`animate__animated animate__fadeInUp ${styles.txt}`}>
                 <FaDotCircle  className={styles.circle} />
                 <h1>Logo design services can be selected separately or integrated within our application design.</h1>
@@ -25,8 +25,8 @@ const Estimate = () => {
              <button className={styles.btn}>Estimate logo cost</button>
              
          </div>
-         <div className={`xlg:col-span-6 lg:col-span-6 md:col-span-12 sm:col-span-12 xm:col-span-12`}>
-          <Image src={Phone} />
+         <div className={`col-span-12 ${styles.imgContainer}`}>
+          <Image src={Phone} className={styles.img} />
          </div>
         </div>
       </div>

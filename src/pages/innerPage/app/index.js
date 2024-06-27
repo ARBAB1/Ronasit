@@ -12,7 +12,7 @@ import Estimate from "../components/Estimate/Estimate";
 import Gallery from "../components/gallery/gallery";
 import Footer from "../../../components/footer/index";
 import SecondryFooter from "../../../components/secondaryFooter/index";
-import Design from "./components/design/design";
+import Design from "./components/design2/design";
 import Faq from "./components/FAQ/Faq";
 
 import "animate.css";
@@ -82,8 +82,6 @@ const index = () => {
             </div>
           </div>
         </div>
-      </div>
-
       <Count />
       <Design />
       <Product />
@@ -94,6 +92,8 @@ const index = () => {
       <Faq />
       <SecondryFooter />
       <Footer />
+      </div>
+
     </>
   );
 };

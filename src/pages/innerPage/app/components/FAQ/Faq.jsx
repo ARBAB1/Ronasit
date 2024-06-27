@@ -85,10 +85,10 @@ const Faq = () => {
    return (
     <div className={`container ${styles.container}`}>
       <div className={`grid grid-cols-12 gap-4 ${styles.SubContainer}`}>
-        <div className={`col-span-2 p-4 animate__animated animate__fadeInUp ${styles.HeadinSide}`}>
+        <div className={`lg:col-span-2 p-4 animate__animated animate__fadeInUp ${styles.HeadinSide}`}>
             <h1 className={styles.FaqText}>FAQ</h1>
         </div>
-        <div className={`col-span-5  p-4 animate__animated animate__fadeInUp ${styles.middleSide}`}>
+        <div className={`lg:col-span-5 p-4 animate__animated animate__fadeInUp ${styles.middleSide}`}>
         <div className={styles.BoxSide} onClick={HandleFirst}>
               {
                   First ? 
@@ -155,7 +155,7 @@ const Faq = () => {
             </div>
             
         </div>
-        <div className={`col-span-5  ${styles.middleSide}`}>
+        <div className={`lg:col-span-5  ${styles.middleSide}`}>
         <div className={styles.BoxSide} onClick={HandleFifth}>
               {
                   Fifth ? 

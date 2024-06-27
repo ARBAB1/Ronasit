@@ -1,13 +1,19 @@
 "use client";
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
 import style from "./style.module.css";
 import Magnetic from "../magnetic";
 import { useTheme } from "next-themes";
 import { TbMenu } from "react-icons/tb";
-
+import { MdOutlineMenu } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 const Header = forwardRef(function index(props, ref) {
+  const [header, setHeader] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
+
+  const HandleMenu = () => {
+    setHeader(!header);
+  };
   return (
     <>
       <div
@@ -72,27 +78,74 @@ const Header = forwardRef(function index(props, ref) {
           </Magnetic>
         </div>
       </div>
-      <div className={`container ${style.ResponsiveContainer}`}>
-        <div className={`grid grid-cols-12 gap-4${style.row}`}>
-          <div className={`col-span-2 ${style.logo}`}>
+
+
+      {/* <div className={`container ${ style.ResponsiveContainer}`}>
+        <div className={`grid grid-cols-12 gap-4 ${style.REsrow}`}>
+          <div className={`col-span-3 ${style.Reslogo}`}>
             <h1>Ronas.</h1>
           </div>
-          <div className={`col-span-10 ${style.logo}`}>
+          <div className={`col-span-9 ${style.rightside}`}>
             <Magnetic>
               <div
-                className={`${style.burger} text-white	dark:text-black	 bg-black dark:bg-white`}
+                className={`${style.Resburger} text-white	dark:text-black	 bg-black dark:bg-white`}
               >
-                <div ref={ref} className={`${style.bounds} font-ZonaSemiFont`}>
+                <div
+                  ref={ref}
+                  className={`${style.Resbounds} font-ZonaSemiFont`}
+                >
                   Estimate Project
                 </div>
               </div>
             </Magnetic>
-              <div>
-
-              </div>
+            {header ? (
+              <RxCross2 onClick={HandleMenu} size={24} />
+            ) : (
+              <MdOutlineMenu
+                className={style.menu}
+                size={24}
+                onClick={HandleMenu}
+              />
+            )}
           </div>
         </div>
       </div>
+      {header ? (
+        <div className={`container ${ style.HeaderMenu} bg-${resolvedTheme === "dark" ? "light" : "dark"}`}>
+          <div className={`grid grid-cols-12 gap-4 ${style.MenuContainer}`}>
+            <div className={`col-span-6`}>
+              <h1>Menu</h1>
+              <div className={style.menulist}>
+                <a href="">Services</a>
+                <a href="">Design Project</a>
+                <a href="">Cases</a>
+                <a href="">About</a>
+                <a href="">How we work</a>
+                <a href="">Blog</a>
+              </div>
+            </div>
+            <div className={`col-span-6`}>
+              <h1>Get in touch</h1>
+              <div className={style.menulist}>
+                <h1>Hello@gmail.com</h1>
+                <p>Theme</p>
+                <div
+                  onClick={() =>
+                    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+                  }
+                  className={`${style.ThemeToggle} mr-8 justify-${
+                    resolvedTheme === "dark" ? "end" : "start"
+                  }`}
+                >
+                  <span className={style.toggleBtn}></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )} */}
     </>
   );
 });

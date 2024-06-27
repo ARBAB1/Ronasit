@@ -4,3 +4,38 @@
     top: 120px !important;
     height: 110vh;
 }
+
+.Ressub{
+    display: none;
+}
+@media screen and (max-width: 576px) {
+    .responsiveText{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .responsiveSide{
+    }
+    .sub{
+        display: none;
+    }
+    .Ressub{
+        display: block;
+    }
+    .ResvisibleClass{
+        display: flex;
+    }
+    .Ressub h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .text{
+        font-size: 0.759rem !important;
+    }
+    .paratext{
+        font-size: 0.759rem !important;
+        
+    }
+}

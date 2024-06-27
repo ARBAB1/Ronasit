@@ -1,9 +1,10 @@
-.container{
-    margin: 5rem 0rem;
-    padding: 0px 150px;
-}
 .secondContainer{
     margin-top: 7rem;
+    padding: 0px 160px;
+}
+
+.RessecondContainer{
+    display: none;
 }
 
 
@@ -13,7 +14,7 @@
     top: 0;
     padding: 20px;
     font-size: 2.75rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 3rem;
     top: 95px;
 }
@@ -74,47 +75,13 @@
         transform:translate(0);
     }
 }
-.boxCont h1{
-    font-size: 1.875rem;
-    line-height: 38px;
-    color: #fff;
-    font-weight: 500;
-    margin: auto auto 35px;
-    position: relative;
 
-}
 
-.boxCont button{
-    width: 15rem;
-    position: relative;
-    z-index: 1;
-    padding: 15px 45px;
-    display: inline-block;
-    vertical-align: top;
-    background-color: #ffffff;
-    color: black;
-    border-radius: 50px;
-    margin: 20px 0px;
-    font-size: 1rem;
-}
-.boxCont{
-    background-image: url('../../Images/call-to-action-4.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    max-width: 725px;
-    padding: 56px 40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    border-radius: 19px;
-}
-
-.SubContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width:992px) {
+    .secondContainer{
+        display: none;
+    }
+    .RessecondContainer{
+        display: block;
+    }
 }

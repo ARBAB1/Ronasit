@@ -8,8 +8,8 @@ import { LiaPencilRulerSolid } from "react-icons/lia";
 const Time = () => {
   return (
     <div className='container mt-24 mb-24'>
-    <div className="grid grid-cols-12 gap-4" >
-      <div className={`lg:col-span-4 p-4 ${styles.timebox}`}>
+    <div className={`grid grid-cols-12 gap-4 ${styles.SubConatiner}`}>
+      <div className={`col-span-4 p-4 ${styles.timebox}`}>
         <span className={styles.timeicon}>
          <MdAccessTime size={42} className={styles.icon} />
           <h1>Time*</h1>
@@ -22,7 +22,7 @@ const Time = () => {
          </span>
        
       </div>
-      <div className={`lg:col-span-4 p-4 ${styles.timebox}`}>
+      <div className={`col-span-4 p-4 ${styles.timebox}`}>
         <span className={styles.timeicon}>
          <GiMoneyStack size={42} className={styles.icon} />
           <h1>Time*</h1>
@@ -35,7 +35,7 @@ const Time = () => {
          </span>
        
       </div>
-      <div className={`lg:col-span-4 p-4 ${styles.timebox}`}>
+      <div className={`col-span-4 p-4 ${styles.timebox}`}>
         <span className={styles.timeicon}>
          <LiaPencilRulerSolid size={42} className={styles.icon} />
           <h1>Time*</h1>

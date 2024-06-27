@@ -1,9 +1,10 @@
-.container{
+/* Default styles (for larger screens) */
+.container {
     padding: 0px 150px;
     margin: 5rem 0rem;
 }
 
-.iconbox{
+.iconbox {
     display: inline-block;
     padding: 28px;
     border-radius: 36px;
@@ -11,26 +12,122 @@
     margin-bottom: 36px;
 }
 
-.heading{
+.heading {
     font-size: 30px;
     margin: 5rem 0rem;
     font-weight: 600;
     letter-spacing: 1px;
-
 }
 
-.smile{
+.smile {
     color: #3eb9fe;
-    font-size: 48px; 
+    font-size: 48px;
 }
 
-.smileheading{
+.smileheading {
     font-size: 1.87rem;
     line-height: 35px;
     font-weight: 600;
     margin-bottom: 1.75rem;
 }
 
-.boxes{
+.boxes {
     padding: 0px 50px;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .container {
+        padding: 0px 100px;
+        margin: 4rem 0rem;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .iconbox {
+        padding: 24px;
+        margin-bottom: 30px;
+    }
+
+    .heading {
+        font-size: 28px;
+        margin: 4rem 0rem;
+    }
+
+    .smile {
+        font-size: 42px;
+    }
+
+    .smileheading {
+        font-size: 1.75rem;
+        line-height: 32px;
+    }
+
+    .boxes {
+        padding: 0px 40px;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+    .container {
+        padding: 0px 50px;
+        margin: 3rem 0rem;
+    }
+
+    .iconbox {
+        padding: 20px;
+        margin-bottom: 24px;
+    }
+
+    .heading {
+        font-size: 24px;
+        margin: 3rem 0rem;
+    }
+
+    .smile {
+        font-size: 36px;
+    }
+
+    .smileheading {
+        font-size: 1.5rem;
+        line-height: 28px;
+    }
+
+    .boxes {
+        padding: 0px 20px;
+    }
+}
+
+/* Extra small screens (very small phones) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0px 20px;
+        margin: 2rem 0rem;
+    }
+
+    .iconbox {
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+
+    .heading {
+        font-size: 20px;
+        margin: 2rem 0rem;
+    }
+
+    .smile {
+        font-size: 30px;
+    }
+
+    .smileheading {
+        font-size: 1.25rem;
+        line-height: 24px;
+    }
+
+    .boxes {
+        padding: 0px 10px;
+    }
 }

@@ -1,4 +1,4 @@
-
+/* 
 .BoxContainer {
     display: flex;
     align-items: center;
@@ -31,4 +31,98 @@
 
 .ul li{
     list-style: disc;
+} */
+
+
+/* Base styles */
+.SubConatiner {
+    display: flex;
+    
+}
+
+.timebox {
+    padding: 48px 48px 64px;
+    border-radius: 23px;
+    background: rgba(38,160,248,.1);
+    width: 100%;
+}
+
+.timeicon {
+    /* Add styles for timeicon if needed */
+}
+
+.timeicon h1 {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 38px;
+}
+
+.ulcont {
+    margin-top: 120px;
+}
+
+.icon {
+    color: #3ea4dd;
+}
+
+.ul li {
+    list-style: disc;
+}
+
+/* Tablet styles */
+@media (max-width: 992px){
+    .SubConatiner{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .timebox{
+        width: 18rem;
+        height: 18rem;
+    }
+
+}
+@media (max-width: 768px) {
+    .SubConatiner{
+        display: flex;
+        flex-direction: column;
+    }
+    .BoxContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timebox {
+        width: 100%;
+        padding: 32px 32px 48px;
+    }
+
+    .timeicon h1 {
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+
+    .ulcont {
+        margin-top: 80px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .BoxContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timebox {
+        padding: 24px 24px 32px;
+    }
+
+    .timeicon h1 {
+        font-size: 1.25rem;
+        line-height: 28px;
+    }
+
+    .ulcont {
+        margin-top: 60px;
+    }
 }

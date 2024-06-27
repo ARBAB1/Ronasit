@@ -2,11 +2,13 @@
 .container {
     padding-bottom: 0 !important;
     margin: 7rem 0rem;
+    padding: 0px 150px;
+
 }
 
 .roe {
     display: flex;
-    padding: 0px 150px;
+    /* padding: 0px 150px; */
 }
 
 .Heading h1 {

@@ -10,20 +10,18 @@ import FourImage from "./images/four.webp";
 import Image from "next/image";
 import Time from "../components/time/Time";
 import Estimate from "../components/Estimate/Estimate";
-import Gallery from '../components/gallery/gallery'
+import Gallery from "../components/gallery/gallery";
 import Footer from "../../../components/footer/index";
 import SecondryFooter from "../../../components/secondaryFooter/index";
-import Design from '../components/design/design'
+import Design from "../components/design/design";
 import Portfolio from "../components/portfolio/portfolio";
 import Faq from "../components/FAQ/Faq";
 import Employee from "../components/Employe/Employee";
 
-
-import 'animate.css';
+import "animate.css";
 import Numbers from "../components/number/Numbers";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 const LogoDesign = () => {
   const stickyElement = useRef(null);
@@ -59,25 +57,44 @@ const LogoDesign = () => {
           </span>
         </div>
         <div className={`grid grid-cols-12 gap-4" ${styles.abouttheservice}`}>
-            <div className="col-span-8 p-4 animate__animated animate__fadeInUp" > 
-              <p className={`animate__animated animate__fadeInUp ${styles.abouttheserviceHeading}`} >About The Services</p>
-              <h1 className={`animate__animated animate__fadeInUp ${styles.AboutServiceContent}`} >As a versatile IT company, we extend our capabilities beyond technology solutions to also encompass logo design services. We offer a tailored approach to create distinctive and memorable logos that visually echo the key attributes of your brand.</h1>
-            </div>
-            <div className="col-span-4 p-4">
-                <p className={`animate__animated animate__fadeInUp ${styles.AboutServiceContent2}`} >Our expert designers keep versatility at the heart of their craftsmanship, ensuring your logo demonstrates great flexibility across various applications. Utilizing typography that is compatible with multiple formats, we can help you make a powerful visual statement.</p>
-            </div>
+          <div className="col-span-8 p-4 animate__animated animate__fadeInUp">
+            <p
+              className={`animate__animated animate__fadeInUp ${styles.abouttheserviceHeading}`}
+            >
+              About The Services
+            </p>
+            <h1
+              className={`animate__animated animate__fadeInUp ${styles.AboutServiceContent}`}
+            >
+              As a versatile IT company, we extend our capabilities beyond
+              technology solutions to also encompass logo design services. We
+              offer a tailored approach to create distinctive and memorable
+              logos that visually echo the key attributes of your brand.
+            </h1>
+          </div>
+          <div className="col-span-4 p-4">
+            <p
+              className={`animate__animated animate__fadeInUp ${styles.AboutServiceContent2}`}
+            >
+              Our expert designers keep versatility at the heart of their
+              craftsmanship, ensuring your logo demonstrates great flexibility
+              across various applications. Utilizing typography that is
+              compatible with multiple formats, we can help you make a powerful
+              visual statement.
+            </p>
+          </div>
         </div>
-          <Time />
-          <Estimate />
-          {/* <Gallery /> */}
-          <Design />
-          <Portfolio />
-          <Faq />
+        <Time />
+        <Estimate />
+        {/* <Gallery /> */}
+        <Design />
+        <Portfolio />
+        <Employee />
+        <Numbers />
+        <Faq />
+        <SecondryFooter />
+        <Footer />
       </div>
-          <Employee/>
-          <Numbers />
-           <SecondryFooter />
-          <Footer />
     </>
   );
 };

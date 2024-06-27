@@ -1,34 +1,55 @@
-.container{
-    margin: 5rem 0rem;
-    padding: 0px 150px;
+.container {
+    padding: 0 5%; /* Adjusted padding for responsiveness */
 }
 
-.Commonds{
+.Commonds {
     padding: 10px;
-    }
+}
 
-.subContainer h1{
-    display: block;
-    font-size: 3.75rem;
-    margin-bottom: 25px;
-    line-height: 1;
+.subContainer h1 {
+    font-size: 3rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 20px; /* Adjusted margin for smaller screens */
     font-weight: 600;
-}    
-.sub2Container{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-around; */
-}
-
-.Commonds h1{
-    display: block;
-    font-size: 1.75rem;
-    margin-bottom: 25px;
     line-height: 1;
-    font-weight: 500;
 }
 
-.Commonds p{
+.sub2Container {
+    display: flex;
+    flex-direction: row; /* Adjusted flex-direction for smaller screens */
+    align-items: center; /* Center items in smaller screens */
+}
+
+.Commonds h1 {
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    font-weight: 500;
+    line-height: 1;
+}
+
+.Commonds p {
     line-height: 1.5;
-    display: inline-block;
+    display: block; /* Changed display to block for better readability on smaller screens */
+}
+
+/* Media Queries for finer adjustments */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 150px; /* Retain original padding for larger screens */
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .subContainer {
+        flex-direction: column; /* Adjust to column layout on smaller screens */
+        align-items: flex-start; /* Align items to start on smaller screens */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sub2Container {
+        display: flex;
+        flex-direction: column; /* Adjusted flex-direction for smaller screens */
+        align-items: center; /* Center items in smaller screens */
+    }
 }

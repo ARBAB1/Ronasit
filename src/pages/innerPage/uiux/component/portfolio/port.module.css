@@ -1,9 +1,10 @@
-.container{
+/* Base styles */
+.container {
     padding: 0px 170px;
     margin: 5rem 0rem;
 }
 
-.header h1{
+.header h1 {
     display: block;
     font-size: 2.75rem;
     margin-bottom: 25px;
@@ -11,12 +12,12 @@
     font-weight: 600;
 }
 
-.header p{
+.header p {
     line-height: 1.5;
-    display: inline-block
+    display: inline-block;
 }
 
-.headerbtn button{
+.headerbtn button {
     position: relative;
     z-index: 1;
     padding: 15px 45px;
@@ -24,10 +25,68 @@
     vertical-align: top;
     border: 0.5px solid white;
     border-radius: 50px;
-
 }
-.headerbtn{
+
+.headerbtn {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0px 100px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0px 50px;
+    }
+
+    .header h1 {
+        font-size: 2.25rem;
+    }
+
+    .headerbtn button {
+        padding: 12px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0px 30px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .headerbtn {
+        flex-direction: column;
+    }
+
+    .headerbtn button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.75rem;
+    }
+
+    .headerbtn button {
+        padding: 10px 30px;
+    }
 }

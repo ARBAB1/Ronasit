@@ -1,28 +1,49 @@
-.container{
-    margin: 5rem 0rem;
-    padding: 0px 150px;
+.container {
+    margin: 5rem 5%; /* Adjusted margin for responsiveness */
+    padding: 0 5%; /* Adjusted padding for responsiveness */
 }
 
-.Commonds{
-    padding: 10px;
-    
+.Commonds {
+    padding: 10px; /* Retain original padding */
 }
-.subContainer{
+
+.subContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column; /* Adjusted flex-direction for smaller screens */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
-.Commonds h1{
-    display: block;
-    font-size: 3.75rem;
-    margin-bottom: 25px;
-    line-height: 1;
+.Commonds h1 {
+    font-size: 2.5rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    line-height: 1.2; /* Adjusted line height for smaller screens */
     font-weight: 700;
 }
 
-.Commonds p{
-    line-height: 1.5;
-    display: inline-block;
+.Commonds p {
+    line-height: 1.5; /* Retain original line height */
+    margin-bottom: 1rem; /* Adjusted margin for smaller screens */
+    text-align: center; /* Center text horizontally */
+}
+
+/* Media Queries for finer adjustments */
+@media (min-width: 768px) {
+    .container {
+        margin: 5rem 0; /* Reset margin for larger screens */
+    }
+
+    .subContainer {
+        flex-direction: row; /* Restore original flex-direction for larger screens */
+    }
+
+    .Commonds h1 {
+        font-size: 3.75rem; /* Restore original font size for larger screens */
+        margin-bottom: 25px; /* Restore original margin for larger screens */
+        line-height: 1; /* Restore original line height for larger screens */
+    }
+
+    .Commonds p {
+        text-align: left; /* Reset text alignment to left for larger screens */
+    }
 }

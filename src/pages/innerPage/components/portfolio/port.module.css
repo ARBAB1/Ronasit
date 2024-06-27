@@ -20,3 +20,12 @@
     font-size: 0.7598rem;
 
 }
+
+
+@media screen and (max-width:992px) {
+    .analysisContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

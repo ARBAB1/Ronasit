@@ -96,19 +96,18 @@ const uiux = () => {
         {/* <Gallery /> */}
         {/* <Portfolio /> */}
         {/* <Faq /> */}
-      </div>
       <OFFER />
       <Design />
        <Count />
        <Whyus />
-      <Numbers />
+       <div className={styles.numbers}>
+        <Numbers />
+       </div>
       <WeServe />
        <Portfolio />
-      {/* <Time /> */}
-        {/* <Employee/>
-            */}
       <SecondryFooter />
       <Footer />
+      </div>
     </>
   );
 };
