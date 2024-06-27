@@ -545,8 +545,6 @@ export default function Home() {
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-12">
           <div className={`p-12 m-2 lg:col-span-3 sm:col-span-12 ${Style.visibleClass}`}>
-
-
             <div className='pb-6'>
               <div className={`h-16 w-16 bg-white rounded-full mb-4 transition duration-300 ease-in-out ${visibleComponent == "visible1" ? "border-4 border-theme-blue" : ""}`}>
                 <img className='h-full w-full rounded-full' src="https://ronasit.com/_next/image/?url=%2Fimg%2Favatar-1.webp&w=48&q=75" alt="" />
@@ -554,9 +552,6 @@ export default function Home() {
               <h6 className='font-ZonaNormalFont text-base '>Bob Glazebrook</h6>
               <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
             </div>
-
-
-
             <div className='pb-6'>
               <div className={`h-16 w-16 bg-white rounded-full mb-4 transition duration-300 ease-in-out ${visibleComponent == "visible2" ? "border-4 border-theme-blue" : ""}`}>
                 <img className='h-full w-full rounded-full' src="https://ronasit.com/_next/image/?url=%2Fimg%2Favatar-1.webp&w=48&q=75" alt="" />
@@ -564,8 +559,6 @@ export default function Home() {
               <h6 className='font-ZonaNormalFont text-base '>Bob Glazebrook</h6>
               <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
             </div>
-
-
             <div className='pb-6'>
               <div className={`h-16 w-16 bg-white rounded-full mb-4 transition duration-300 ease-in-out ${visibleComponent == "visible3" ? "border-4 border-theme-blue" : ""}`}>
                 <img className='h-full w-full rounded-full' src="https://ronasit.com/_next/image/?url=%2Fimg%2Favatar-1.webp&w=48&q=75" alt="" />
@@ -573,8 +566,6 @@ export default function Home() {
               <h6 className='font-ZonaNormalFont text-base '>Bob Glazebrook</h6>
               <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
             </div>
-
-
             <div className='pb-6'>
               <div className={`h-16 w-16 bg-white rounded-full mb-4 transition duration-300 ease-in-out ${visibleComponent == "visible4" ? "border-4 border-theme-blue" : ""}`}>
                 <img className='h-full w-full rounded-full' src="https://ronasit.com/_next/image/?url=%2Fimg%2Favatar-1.webp&w=48&q=75" alt="" />
@@ -583,12 +574,7 @@ export default function Home() {
               <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
             </div>
           </div>
-
           <div className="p-12 m-2 lg:col-span-9 sm:col-span-12 animate__animated animate__fadeInUp">
-
-
-
-
             <VisibilityObserver className='py-72' id="visible1" onVisible={handleVisibilityChange}>
               <div className='flex items-center py-8'>
                 <div className='px-1'>
@@ -606,8 +592,6 @@ export default function Home() {
                 <div className='pl-1 pr-8'>
                   <BsFillStarFill color='#ef4335' size={28} />
                 </div>
-
-
                 <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
                   <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
                 </div>
@@ -634,8 +618,6 @@ export default function Home() {
                 <div className='pl-1 pr-8'>
                   <BsFillStarFill color='#ef4335' size={28} />
                 </div>
-
-
                 <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
                   <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
                 </div>
@@ -661,8 +643,6 @@ export default function Home() {
                 <div className='pl-1 pr-8'>
                   <BsFillStarFill color='#ef4335' size={28} />
                 </div>
-
-
                 <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
                   <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
                 </div>
@@ -688,8 +668,6 @@ export default function Home() {
                 <div className='pl-1 pr-8'>
                   <BsFillStarFill color='#ef4335' size={28} />
                 </div>
-
-
                 <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
                   <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
                 </div>
@@ -698,41 +676,29 @@ export default function Home() {
                 The quality of their work stands out the most. They’re knowledgeable and provide useful feedback.
               </h1>
             </VisibilityObserver>
-
-
-
-
           </div>
         </div>
       </div>
 
       <div className="container pt-28 mx-auto lg:px-28 sm:px-4">
         <div className="grid md:grid-cols-12">
-
           <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
             <p className="font-ZonaBoldFont text-3xl">Numbers</p>
           </div>
-
           <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
             <h4 className="font-ZonaBoldFont text-6xl">1870</h4>
             <p className='font-ZonaNormalFont text-xl pt-2'>reviews<br />across 5 platforms</p>
           </div>
-
           <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
             <h4 className="font-ZonaBoldFont text-6xl">Top 50</h4>
             <p className='font-ZonaNormalFont text-xl pt-2'>app development<br />companies on</p>
           </div>
-
-
           <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
             <h4 className="font-ZonaBoldFont text-6xl">4.9 / 5</h4>
             <p className='font-ZonaNormalFont text-xl pt-2'>average rate</p>
           </div>
-
           <div className="p-12 m-2 lg:col-span-3 sm:col-span-12 animate__animated animate__fadeInUp">
           </div>
-
-
           <div className="flex p-12 m-2 grid md:grid-cols-12 lg:col-span-9 sm:col-span-12 animate__animated animate__fadeInUp">
             <div className='lg:col-span-6'>
               <div className='flex items-center'>
@@ -905,7 +871,6 @@ export default function Home() {
       </div>
       <SecondaryFooter />
       <Footer />
-
 
     </>
   );
