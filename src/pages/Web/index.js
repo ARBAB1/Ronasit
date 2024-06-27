@@ -27,44 +27,45 @@ const index = () => {
         setTimeout(() => {
           setVisibleComponent(id);
         }, 200);
-      };
-      const VisibilityObserver = ({ id, children, onVisible, className }) => {
-        const componentRef = useRef(null);
-      
-        useEffect(() => {
-          const observerCallback = (entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                onVisible(id);
-              }
-            });
-          };
-      
-          const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-          };
-      
-          const observer = new IntersectionObserver(observerCallback, observerOptions);
-      
-          if (componentRef.current) {
-            observer.observe(componentRef.current);
-          }
-      
-          return () => {
-            if (componentRef.current) {
-              observer.unobserve(componentRef.current);
+    };
+    const VisibilityObserver = ({ id, children, onVisible, className }) => {
+    const componentRef = useRef(null);
+    
+    useEffect(() => {
+        const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            onVisible(id);
             }
-          };
-        }, [id, onVisible]);
-      
-        return (
-          <div ref={componentRef} id={id} className={className}>
-            {children}
-          </div>
-        );
-      };
+        });
+        };
+    
+        const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+        };
+    
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+        if (componentRef.current) {
+        observer.observe(componentRef.current);
+        }
+    
+        return () => {
+        if (componentRef.current) {
+            observer.unobserve(componentRef.current);
+        }
+        };
+    }, [id, onVisible]);
+    
+    return (
+        <div ref={componentRef} id={id} className={className}>
+        {children}
+        </div>
+    );
+    };
+
     return (
         <>
             <Header ref={stickyElement} />
@@ -112,7 +113,7 @@ const index = () => {
                             In the process of delivering custom web development services, we use Django and Laravel for the backend and React and Angular for the frontend. Here are a few reasons for that:
                         </p>
                     </div>
-                    <div className='grid grid-cols-3 gap-6' style={{ marginTop: "80px" }}>
+                    <div className={`${style.iconsFlex} grid grid-cols-3 gap-6`} style={{ marginTop: "80px" }}>
                         <div className={`${style.icon_box_one}`}>
                             <h6><span className={`${style.one}`}></span></h6>
                             <p className='font-ZonaSemiFont'>
@@ -136,7 +137,7 @@ const index = () => {
             </section>
             <section>
                 <div className="container mt-5" style={{ marginTop: "130px" }}>
-                    <div className="grid grid-cols-4 gap-6">
+                    <div className={`${style.projectExplainedFlex} grid grid-cols-4 gap-6`}>
                         <div className={`${style.projectSection}`}>
                             <span className='font-ZonaSemiFont'>50+</span>
                             <p className='font-ZonaNormalFont'>
@@ -166,7 +167,7 @@ const index = () => {
             </section>
             <section className={`${style.time_section}`}>
                 <div className="container">
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className={`${style.timeSectionFlex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.time_left_box} flex flex-row`}>
                             <h5 className='font-ZonaSemiFont'>Costs and time</h5>
                             <span className='font-ZonaSemiFont'>*</span>
@@ -182,7 +183,7 @@ const index = () => {
             </section>
             <section className={`${style.dev_section}`}>
                 <div className="container">
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className={`${style.dev_sectionFLex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.dev_left}`}>
                             <h5 className={`${style.img}`}></h5>
                             <h3 className='font-ZonaSemiFont'>Custom web app development</h3>
@@ -199,7 +200,7 @@ const index = () => {
             </section>
             <section className={`${style.pack_section}`}>
                 <div className="container">
-                    <div className='grid grid-cols-2 gap-6'>
+                    <div className={`${style.packSectionFlex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.pack_section_left}`}>
                             <h5 className={`${style.img}`}></h5>
                             <h3 className='font-ZonaSemiFont'>Landing page development</h3>
@@ -223,7 +224,7 @@ const index = () => {
             </section>
             <section className={`${style.dev_section} ${style.corporate_section}`}>
                 <div className="container">
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className={`${style.dev_sectionFLex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.dev_left}`}>
                             <h5 className={`${style.img_corporate_section}`}></h5>
                             <h3 className='font-ZonaSemiFont'>Corporate website development</h3>
@@ -240,7 +241,7 @@ const index = () => {
             </section>
             <section className={`${style.dev_section} ${style.Web_interface_section}`}>
                 <div className="container">
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className={`${style.dev_sectionFLex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.dev_left}`}>
                             <h5 className={`${style.img_Web_interface_section}`}></h5>
                             <h3 className='font-ZonaSemiFont'>Web interface design</h3>
@@ -267,7 +268,7 @@ const index = () => {
             </section>
             <section className={`${style.deliver_section}`}>
                 <div className="container">
-                    <div className='grid grid-cols-2 gap-6'>
+                    <div className={`${style.deliver_section_flex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.deliver_head}`}>
                             <span className='font-ZonaSemiFont'>
                                 How do we deliver <br /> custom web <br /> development services?
@@ -330,7 +331,7 @@ const index = () => {
             <section className={`${style.blog_section}`}>
                 <div className="container">
                     <h2 className='font-ZonaSemiFont'>Articles</h2>
-                    <div className='grid grid-cols-2 gap-6'>
+                    <div className={`${style.articalsFlex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.blog_content_box}`}>
                             <Image src={demoImg} alt="" />
                             <span className='font-ZonaSemiFont'>Tech</span>
@@ -344,7 +345,7 @@ const index = () => {
                             <p className='font-ZonaNormalFont'>2023-05-31</p>
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-6'>
+                    <div className={`${style.articalsFlex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.blog_content_box}`}>
                             <Image src={demoImg} alt="" />
                             <span className='font-ZonaSemiFont'>Tech</span>
@@ -365,7 +366,7 @@ const index = () => {
                     <h6 className='font-ZonaSemiFont'>Portfolio</h6>
                     <span className='font-ZonaNormalFont'>We’ve already become a web development company for these clients. Read about real cases if you’re considering outsourcing your web development to Ronas IT.</span>
 
-                    <div className='grid grid-cols-2 gap-6'>
+                    <div className={`${style.portFlex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.port_box}`} style={{ background: "#F5F7F9" }}>
                             <Image src={cardone} alt="" />
                             <div>
@@ -401,7 +402,7 @@ const index = () => {
             </section>
             <section className={`${style.deliver_section}`}>
                 <div className="container">
-                    <div className='grid grid-cols-2 gap-6'>
+                    <div className={`${style.deliver_section_flex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.deliver_head}`}>
                             <span className='font-ZonaSemiFont'>
                                 What are the <br /> benefits of choosing <br /> us as a web <br /> development <br />company?
@@ -448,7 +449,7 @@ const index = () => {
             </section>
             <section className={`${style.desPackSection}`}>
                 <div className="container">
-                    <div className='grid grid-cols-2 gap-6'>
+                    <div className={`${style.desPackSectionFlex} grid grid-cols-2 gap-6`}>
                         <div className={`${style.desPackSection_box}`}>
                             <h5 className='font-ZonaSemiFont'>Backend AI integration</h5>
                             <p className='font-ZonaNormalFont'>
@@ -464,7 +465,7 @@ const index = () => {
                             <button className='font-ZonaSemiFont'>View More</button>
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-6 mt-5'>
+                    <div className={`${style.desPackSectionFlex} grid grid-cols-2 gap-6 mt-5`}>
                         <div className={`${style.desPackSection_box}`}>
                             <h5 className='font-ZonaSemiFont'>Rapid marketplace roll out</h5>
                             <p className='font-ZonaNormalFont'>
@@ -815,7 +816,7 @@ const index = () => {
                 </div>
             </div>
             <SecondaryFooter />
-      <Footer />
+            <Footer />
         </>
     )
 }

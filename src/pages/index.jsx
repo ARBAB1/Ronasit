@@ -574,7 +574,6 @@ export default function Home() {
               <p className='font-ZonaNormalFont text-base text-theme-gray'>Principal, Visual<br />Engineering Inc.</p>
             </div>
           </div>
-
           <div className="p-12 m-2 lg:col-span-9 sm:col-span-12 animate__animated animate__fadeInUp">
             <VisibilityObserver className='py-72' id="visible1" onVisible={handleVisibilityChange}>
               <div className='flex items-center py-8'>
@@ -593,8 +592,6 @@ export default function Home() {
                 <div className='pl-1 pr-8'>
                   <BsFillStarFill color='#ef4335' size={28} />
                 </div>
-
-
                 <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
                   <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
                 </div>
@@ -621,8 +618,6 @@ export default function Home() {
                 <div className='pl-1 pr-8'>
                   <BsFillStarFill color='#ef4335' size={28} />
                 </div>
-
-
                 <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
                   <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
                 </div>
@@ -648,8 +643,6 @@ export default function Home() {
                 <div className='pl-1 pr-8'>
                   <BsFillStarFill color='#ef4335' size={28} />
                 </div>
-
-
                 <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
                   <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
                 </div>
@@ -675,8 +668,6 @@ export default function Home() {
                 <div className='pl-1 pr-8'>
                   <BsFillStarFill color='#ef4335' size={28} />
                 </div>
-
-
                 <div className='px-6 flex items-end justify-center m-0' style={{ borderLeft: '1px solid hsla(0,0%,100%,.5)' }}>
                   <h5 className='font-ZonaNormalFont text-3xl'>5.0</h5>
                 </div>
@@ -685,10 +676,6 @@ export default function Home() {
                 The quality of their work stands out the most. They’re knowledgeable and provide useful feedback.
               </h1>
             </VisibilityObserver>
-
-
-
-
           </div>
         </div>
       </div>
@@ -884,7 +871,6 @@ export default function Home() {
       </div>
       <SecondaryFooter />
       <Footer />
-
 
     </>
   );
