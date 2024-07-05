@@ -17,6 +17,7 @@ import Design from "../components/design/design";
 import Portfolio from "../components/portfolio/portfolio";
 import Faq from "../components/FAQ/Faq";
 import Employee from "../components/Employe/Employee";
+import SocialLink from "../../../components/socialLink/index";
 
 import "animate.css";
 import Numbers from "../components/number/Numbers";
@@ -29,6 +30,7 @@ const LogoDesign = () => {
   return (
     <>
       <Header ref={stickyElement} />
+       <SocialLink />
       <StickyCursor stickyElement={stickyElement} />
       <div className={`container  ${styles.container}`}>
         <div className="row">

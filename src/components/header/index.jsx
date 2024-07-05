@@ -11,14 +11,13 @@ const Header = forwardRef(function index(props, ref) {
   const [header, setHeader] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
+
   const HandleMenu = () => {
     setHeader(!header);
   };
   return (
     <>
-      <div
-        className={`${style.HeaderBackground} px-8 py-6 flex items-center justify-between`}
-      >
+      <div className={`${style.HeaderBackground} px-8 py-6 flex items-center justify-between`} >
         <p className="font-ZonaSemiFont text-2xl font-thin">Ronas.</p>
         <div className="flex items-center justify-content">
           <a
@@ -78,9 +77,7 @@ const Header = forwardRef(function index(props, ref) {
           </Magnetic>
         </div>
       </div>
-
-
-      {/* <div className={`container ${ style.ResponsiveContainer}`}>
+      <div className={` ${ style.ResponsiveContainer}`}>
         <div className={`grid grid-cols-12 gap-4 ${style.REsrow}`}>
           <div className={`col-span-3 ${style.Reslogo}`}>
             <h1>Ronas.</h1>
@@ -111,9 +108,9 @@ const Header = forwardRef(function index(props, ref) {
         </div>
       </div>
       {header ? (
-        <div className={`container ${ style.HeaderMenu} bg-${resolvedTheme === "dark" ? "light" : "dark"}`}>
-          <div className={`grid grid-cols-12 gap-4 ${style.MenuContainer}`}>
-            <div className={`col-span-6`}>
+        <div className={`${style.HeaderMenu} bg-${resolvedTheme === "dark" ? "black" : "white"}`}>
+          <div className={`grid grid-cols-12 gap-4  ${style.MenuContainer}`}>
+            <div className={`col-span-6 p-5`}>
               <h1>Menu</h1>
               <div className={style.menulist}>
                 <a href="">Services</a>
@@ -124,7 +121,7 @@ const Header = forwardRef(function index(props, ref) {
                 <a href="">Blog</a>
               </div>
             </div>
-            <div className={`col-span-6`}>
+            <div className={`col-span-6 p-5`}>
               <h1>Get in touch</h1>
               <div className={style.menulist}>
                 <h1>Hello@gmail.com</h1>
@@ -133,11 +130,11 @@ const Header = forwardRef(function index(props, ref) {
                   onClick={() =>
                     setTheme(resolvedTheme === "dark" ? "light" : "dark")
                   }
-                  className={`${style.ThemeToggle} mr-8 justify-${
+                  className={`${style.ThemeToggle2} mr-8 justify-${
                     resolvedTheme === "dark" ? "end" : "start"
                   }`}
                 >
-                  <span className={style.toggleBtn}></span>
+                  <span className={style.toggleBtn2}></span>
                 </div>
               </div>
             </div>
@@ -145,7 +142,9 @@ const Header = forwardRef(function index(props, ref) {
         </div>
       ) : (
         ""
-      )} */}
+      )}
+
+
     </>
   );
 });
